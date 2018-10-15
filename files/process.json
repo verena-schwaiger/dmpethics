@@ -1,0 +1,41 @@
+
+{
+    "answer" : null,
+    "id" : "A",
+    "decision" : "Are human participants involved?",
+    "paths" : [
+        {
+            "answer" : "yes",
+            "id" : "A2",
+            "decision" : "Are minors involved?",
+            "paths" : [
+                {
+                    "answer" : "yes",
+                    "id" : "A21",
+                    "decision" : "Wards of the state?",
+                    "paths" : [
+                        {
+                            "answer" : "yes",
+                            "id" : "A21b",
+                            "decision" : "Organise advocate",
+                            "paths" : [
+                                {
+                                    "answer" : null,
+                                    "id" : "A21b1",
+                                    "decision" : "Collect consent from advocate"
+                                }
+
+                            ]
+                        },
+                        {
+                            "answer" : "no",
+                            "id" : "A21a",
+                            "decision" : "Collect consent from parents",
+                            "paths": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
