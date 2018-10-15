@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- IDs: Categories in [A-Z], actions/submissions in [a-z], subcategories in [0-9] -->
+<process>
+    <decisions>
+    <!-- <decision id="" yes="" no=""></decision> -->
+        <decision id="A" yes="A2" no="B">Are human participants involved?</decision>
+        <decision id="A2" yes="A21" no="A3">Are minors involved?</decision>
+        <decision id="A21" yes="A21b" no="A21a">Wards of the state?</decision>
+        <decision id="B" yes="B1" no="C">Are animals involved?</decision>
+        <decision id="B1" yes="B1a" no="B2">Are the animals vertebrates?</decision>
+        <decision id="B2" yes="B21" no="B">Are the animals non-vertebrates?</decision>
+        <decision id="B21" yes="B21a" no="Z">Are the non-vertrebrates cephalopods?</decision>
+
+
+    </decisions>
+
+    <actions>
+    <!-- <action id="" goto=""></action> -->
+        <action id="A21b" goto="A21c">Organise advocate</action>
+        <action id="A21c" goto="">Collect consent from advocate</action>
+        <action id="Z" goto="END">No ethics approval required</action>
+        <action id="A21a" goto="A3">Collect consent from parents</action>
+
+    </actions>
+
+<!-- TODO: Merge submissions into actions? Or keep them distinguishable? -->
+    <submissions>
+    <!-- <submission id="" goto=""></submission> -->
+        <submission id="Aa" goto="Ab">Consent form</submission>
+        <submission id="Ab" goto="">Patient information form</submission>
+
+    </submissions>
+
+</process>
