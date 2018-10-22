@@ -26,8 +26,11 @@
 <!-- TODO: Merge submissions into actions? Or keep them distinguishable? -->
     <submissions>
     <!-- <submission id="" goto=""></submission> -->
-        <submission id="Aa" goto="Ab">Consent form</submission>
-        <submission id="Ab" goto="">Patient information form</submission>
+        <submission id="Aa" goto="Ab">
+            <submissionpart id="Aa1" goto="leaf">Consent form</submissionpart>
+            <submissionpart id="Aa2" goto="leaf">Patient information form</submissionpart>
+        </submission>
+        <submission id="Ab">Ethics approval application</submission>
 
     </submissions>
 
