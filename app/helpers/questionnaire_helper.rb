@@ -7,7 +7,7 @@ module QuestionnaireHelper
     rdfarray = Array.new
     rdfmap = Hash.new
 
-    RDF::Turtle::Reader.open('C:\\Users\\Verena\\RubymineProjects\\dmp_ethics\\storage\\questions1.ttl') do |reader|
+    RDF::Turtle::Reader.open('questions1.ttl') do |reader|
 
       reader.each_triple do |subject, predicate, object|
         rdfarray.push([subject.to_s, [predicate.to_s, object.to_s]])
@@ -31,7 +31,7 @@ module QuestionnaireHelper
 
     rdfarray = Array.new
 
-    RDF::Turtle::Reader.open('C:\\Users\\Verena\\RubymineProjects\\dmp_ethics\\storage\\questions1.ttl') do |reader|
+    RDF::Turtle::Reader.open('questions1.ttl') do |reader|
 
       reader.each_triple do |subject, predicate, object|
         rdfarray.push([subject.to_s, [predicate.to_s, object.to_s]])
