@@ -1,0 +1,9 @@
+
+<div id = "questionnaire"></div>
+
+<% @rdfarray = readrdfasarray %>
+<% @rdfmap = readrdf %>
+
+<%= content_tag :div, class: "rdf_array", data: {rdfdata: @rdfarray} do %>
+<% end %>
+

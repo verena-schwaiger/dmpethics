@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+
+div.question {
+  padding: 30px 0px 10px 5%;
+  padding-left: 5%;
+}
+
+div.subquestion {
+  padding: 10px;
+  padding-left: 10%;
+}
+
+div.warning {
+  background: #ffeca8;
+  border: 1px solid #efbb00;
+  padding: 10px 10px 10px 10px;
+  display: inline-block
+}
+
+div.box {
+  padding-left: 5%;
+  padding-top: 10px;
+}
+
+label {
+  padding-left: 5px;
+}
+

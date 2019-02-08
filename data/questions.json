@@ -1,0 +1,60 @@
+{
+  "questions": [
+    {
+      "id": "A",
+      "checked": false,
+        "category": "A",
+        "label": "Are human participants involved?",
+        "comment": "Need informed consent",
+        "children": [
+        {
+          "id": "A00001",
+          "category": "A",
+          "label": "Are minors involved?",
+          "comment": "Need parental consent",
+          "children": [
+            {
+              "id": "A00003",
+              "category": "A",
+              "label": "Are any involved minors wards of the state?",
+              "comment": "An advocate must be organized.",
+              "children": [
+
+              ]
+            }
+
+          ]
+        },
+        {
+          "id": "A00002",
+          "category": "A",
+          "label": "Are pregnant women involved?",
+          "comment": "",
+          "children": [
+
+          ]
+        },
+        {
+          "id": "A00004",
+          "category": "A",
+          "label": "Are prisoners involved?",
+          "comment": "Need informed consent",
+          "children": [
+
+          ]
+        },
+        {
+          "id": "A00005",
+          "category": "A",
+          "label": "Are participants involved who aren't native speakers of your study's language?",
+          "comment": "Study details should be easy to understand.",
+          "children": [
+
+          ]
+        }
+        ]
+    }
+
+
+  ]
+}

@@ -1,0 +1,165 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<A>
+    rdfs:subPropertyOf <root> ;
+    rdf:type "A" ;
+    rdfs:label "Are human participants involved?" ;
+    rdfs:comment "Need informed consent" .
+
+<A00001>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are minors involved?" ;
+    rdfs:comment "Need parental consent" .
+
+<A00002>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are pregnant women involved?" ;
+    rdfs:comment "" .
+
+<A00003>
+    rdfs:subPropertyOf <A00001> ;
+    rdf:type "A" ;
+    rdfs:label "Are any involved minors wards of the state?" ;
+    rdfs:comment "An advocate must be organized." .
+
+<A00004>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are prisoners involved?" ;
+    rdfs:comment "The study should be focussed on prison and prisoners. " .
+
+<A00005>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are participants involved who aren't native speakers of your study's language?" ;
+    rdfs:comment "Study details should be easy to understand." .
+
+<A00006>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are any illiterate participants involved?" ;
+    rdfs:comment "" .
+
+<A00007>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are psychologically vulnerable participants involved?" ;
+    rdfs:comment "" .
+
+<A00008>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are any of the researchers a study subject themselves?" ;
+    rdfs:comment "" .
+
+<A00009>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Is there any risk of psychological or physical harm for participants?" ;
+    rdfs:comment "" .
+
+<A00010>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Are there any potential gatekeepers, such as schools or nursing homes?" ;
+    rdfs:comment "Get permission from the gatekeepers." .
+
+<A00011>
+    rdfs:subPropertyOf <A> ;
+    rdf:type "A" ;
+    rdfs:label "Do participants have knowledge of observation and data collection?" ;
+    rdfs:comment "" .
+
+<B>
+    rdfs:subPropertyOf <root> ;
+    rdf:type "B" ;
+    rdfs:label "Are animals involved?" ;
+    rdfs:comment "Need xyz" .
+
+<B00001>
+    rdfs:subPropertyOf <B> ;
+    rdf:type "B" ;
+    rdfs:label "Are the animals vertrebrates?" ;
+    rdfs:comment "" .
+
+<B00002>
+    rdfs:subPropertyOf <B> ;
+    rdf:type "B" ;
+    rdfs:label "Are the animals non-vertrebrates?" ;
+    rdfs:comment "Non-vertebrates that aren't cephalopods do not require ethics approval." .
+
+<B00003>
+    rdfs:subPropertyOf <B00002> ;
+    rdf:type "B" ;
+    rdfs:label "Are the animals cephalopods?" ;
+    rdfs:comment "" .
+
+<D>
+    rdfs:subPropertyOf <root> ;
+    rdf:type "D" ;
+    rdfs:label "Does your study involve the environment, fieldwork, or existing structures or monuments?" ;
+    rdfs:comment "" .
+
+<D00001>
+    rdfs:subPropertyOf <D> ;
+    rdf:type "D" ;
+    rdfs:label "Could there be potential risk for the environment?" ;
+    rdfs:comment "Detail the potentical risks in your application." .
+
+<D00002>
+    rdfs:subPropertyOf <D> ;
+    rdf:type "D" ;
+    rdfs:label "Does your study involve work on existing monuments?" ;
+    rdfs:comment "Get permission from the parties responsible for the monument." .
+
+<D00003>
+    rdfs:subPropertyOf <D> ;
+    rdf:type "D" ;
+    rdfs:label "Will your study take place on private property?" ;
+    rdfs:comment "Get permission and consent from the owner." .
+
+<D00004>
+    rdfs:subPropertyOf <D> ;
+    rdf:type "D" ;
+    rdfs:label "Is there any form of altering or potentially damaging a monument involved?" ;
+    rdfs:comment "" .
+
+<C>
+    rdfs:subPropertyOf <root> ;
+    rdf:type "C" ;
+    rdfs:label "Check me" ;
+    rdfs:comment "" .
+
+<C00001>
+    rdfs:subPropertyOf <C> ;
+    rdf:type "C" ;
+    rdfs:label "Are you, the researcher, a student?" ;
+    rdfs:comment "The application form will require your supervisor's signature." .
+
+<C00002>
+    rdfs:subPropertyOf <C> ;
+    rdf:type "C" ;
+    rdfs:label "Do you collect data outside the country where you will apply for ethics approval?" ;
+    rdfs:comment "Consult w.r.t. safety guidelines for travelling and fieldwork." .
+
+<C00003>
+    rdfs:subPropertyOf <C00002> ;
+    rdf:type "C" ;
+    rdfs:label "Will the fieldwork in that country come with specific physical or psychological risks for involved researchers?" ;
+    rdfs:comment "" .
+
+<C00004>
+    rdfs:subPropertyOf <C> ;
+    rdf:type "C" ;
+    rdfs:label "Is your institution not the only institution involved in any way or form?" ;
+    rdfs:comment "Collect approval from all involved institutions." .
+
+<C00005>
+    rdfs:subPropertyOf <C> ;
+    rdf:type "C" ;
+    rdfs:label "Could your study results be misused, for example for military purposes?" ;
+    rdfs:comment "" .
