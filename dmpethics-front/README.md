@@ -5,6 +5,12 @@
 yarn install
 ```
 
+## Start server
+```
+yarn serve
+```
+Configured to run at localhost:4000
+
 ### Compiles and hot-reloads for development
 ```
 yarn run serve
