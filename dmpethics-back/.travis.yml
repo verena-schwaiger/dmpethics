@@ -1,4 +1,4 @@
-before_script: cd dmpethics-back
+before_install: cd dmpethics-back
 language: ruby
 rvm:
 - 2.0.0
