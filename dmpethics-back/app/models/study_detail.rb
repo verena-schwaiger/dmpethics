@@ -1,0 +1,2 @@
+class StudyDetail < ApplicationRecord
+end
