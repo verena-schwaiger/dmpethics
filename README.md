@@ -1,6 +1,6 @@
 # dmpethics
 dmp-backend:
-Requirements:
+Contains backend. See README inside folder for details.
 
 dmp-frontend:
-Requirements:
+Contains frontend. See README inside folder for details.
