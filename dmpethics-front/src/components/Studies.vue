@@ -5,14 +5,7 @@
         <label class="label">Study title</label>
         <input type="text" class="input" name="studytitle" v-model="studytitle">
     </div>
-    <div class="form-field">
-        <label class="label">Study description</label>
-        <input type="text" class="input" name="studydesc" v-model="studydesc">
-    </div>
-    <div class="form-field">
-        <label class="label">Main institution for the study</label>
-        <input type="text" class="input" name="institution" v-model="institution">
-    </div>
+
       <button class="saveStudy" @click="saveStudy">Submit</button>
 
   </div>

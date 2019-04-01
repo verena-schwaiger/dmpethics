@@ -1,3 +1,4 @@
+<!-- Shows all studies from the database as an expandable list. -->
 <template>
 <div  class="container">
  <div id="answers">
@@ -8,7 +9,7 @@
         </div>
         <div v-if="isSelected === answer.study" class="form-wiki-outer">
           <div class="form-wiki">
-            <answer-tree :answer-data="answer"></answer-tree>
+            <answer-tree :answer-data="answer" :detail-data="details"></answer-tree>
           </div>
         </div>
       </div>
@@ -26,6 +27,7 @@ export default {
  data() {
   return {
    answers: [],
+   details: [],
    isSelected: false,
    errors: []
   }
@@ -34,7 +36,13 @@ export default {
   mounted () {
     axios
       .get('http://localhost:3000/answers/')
-      .then(response => (this.answers = response.data))
+      .then(response => {
+        this.answers = response.data;
+        return axios.get('http://localhost:3000/study_details/');
+      })
+      .then(response =>{
+        this.details = response;
+      })
   },
   components: {
       AnswerTree

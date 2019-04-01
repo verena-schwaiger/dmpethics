@@ -33,6 +33,10 @@ body {
   padding: 20px;
 }
 
+.wikilink {
+  padding: 10px;
+}
+
 div.question {
   padding: 30px 0px 10px 5%;
   padding-left: 5%;

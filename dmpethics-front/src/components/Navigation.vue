@@ -1,3 +1,5 @@
+
+<!-- Navigation bar -->
 <template>
   <div class="nav">
     <nav>
@@ -17,11 +19,11 @@ export default {
           text: 'Home',
           route:'/'
         },
-        {
+        /*{
           id: 1,
           text: 'User',
           route:'/user'
-        },
+        },*/
         {
           id: 2,
           text: 'Studies',

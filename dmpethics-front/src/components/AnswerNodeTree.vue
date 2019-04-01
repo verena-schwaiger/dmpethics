@@ -1,3 +1,5 @@
+<!-- Renders nodes from the questionnaire data:
+    Only shows requirements that are necessary according to user's filled out questionnaire data -->
 <template>
   <div class="answer-node-tree">
 
@@ -5,8 +7,7 @@
       <div v-if="answers.checked === true">
         <div v-for="requirement in answers.requirements" :key="requirement.id" class="form-wiki-field">
           <label :for="requirement" class="">{{ requirement }}</label>
-          <input>
-
+          <input type="file" id="file" ref="file" @change="handleFile()"/>
         </div>
 
       </div>        
@@ -27,6 +28,12 @@ export default {
     return{
         answered: null
     }
-  }
+  },
+  
+methods: {
+    handleFile() {
+        this.$emit('input', event.target.files[0]);
+    }
+}
 };
 </script>

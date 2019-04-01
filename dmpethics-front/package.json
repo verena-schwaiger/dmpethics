@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "mwbot": "^1.0.10",
     "node-sass": "^4.11.0",
+    "nodemw": "^0.12.2",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2"
