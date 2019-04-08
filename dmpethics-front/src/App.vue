@@ -28,6 +28,33 @@ body {
 .navlink {
   margin-left: 20px;
 }
+.tabs {
+  overflow: hidden;
+}
+
+.tabs ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.tabs a{
+    float: left;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #808080;
+}
+
+.tabs a:hover {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+.tabs a.active {
+    color: #000;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
 
 .container {
   padding: 20px;
@@ -91,15 +118,30 @@ div.box {
   border-bottom: 2px solid #ccc;
   background-color: #f7f7f7;
   padding: 10px;
-
 }
 
 .form-wiki-field{
   padding: 10px;
 }
+.columns {
+  column-width: 200px;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-.form-wiki-field label{
-  padding: 10px;
+.form-wiki-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 2em;
+  grid-gap: .5em;
+  max-width: 700px;
+}
+
+.form-wiki-field {
+  column-width: 200px;
+}
+.form-checklist-field {
+  column-width: 100px;
 }
 
 .form-field {
@@ -112,5 +154,19 @@ div.box {
 
 label {
   padding-left: 5px;
+}
+
+.done {
+  background-color: #d1ffda;
+  padding: 5px;
+}
+
+.missing{
+  background-color: #ffcccc;
+  padding: 5px;
+}
+
+.submitChecklist {
+  margin-top: 20px;
 }
 </style>

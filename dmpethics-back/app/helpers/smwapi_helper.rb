@@ -10,4 +10,11 @@ module SmwapiHelper
   }}#{description}"
   end
 
+  def getExistingData(title)
+    client = MediawikiApi::Client.new "http://localhost/smw/api.php"
+    client.log_in "Verena@editbot", "nq78aakp00ng9811cid7cdcs4a7a8hps"
+    res = client.get_wikitext "#{title}"
+    return res
+  end
+
 end

@@ -7,7 +7,7 @@
       <div v-if="answers.checked === true">
         <div v-for="requirement in answers.requirements" :key="requirement.id" class="form-wiki-field">
           <label :for="requirement" class="">{{ requirement }}</label>
-          <input type="file" id="file" ref="file" @change="handleFile()"/>
+          <input type="file" id="file" @change="handleFile"/>
         </div>
 
       </div>        
@@ -26,13 +26,11 @@ export default {
   },
   data() {
     return{
-        answered: null
-    }
+        answered: null    }
   },
   
 methods: {
-    handleFile() {
-        this.$emit('input', event.target.files[0]);
+    handleFile:function() {
     }
 }
 };

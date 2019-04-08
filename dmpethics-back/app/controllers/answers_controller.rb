@@ -3,7 +3,6 @@ class AnswersController < ApplicationController
   # GET /answers
   def index
     @answers = Answer.all
-
     render json: @answers
   end
 
@@ -25,10 +24,11 @@ class AnswersController < ApplicationController
 
   # PATCH/PUT /answers/1
   def update
-    if @answer.update(answer_params)
-      render json: @answer
+    answer = Answer.find(params['id'])
+    if answer.update(answer_params)
+      render json: answer
     else
-      render json: @answer.errors, status: :unprocessable_entity
+      render json: answer.errors, status: :unprocessable_entity
     end
   end
 
@@ -45,6 +45,6 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:study, :data)
+      params.require(:answer).permit(:id, :study, :data)
     end
 end

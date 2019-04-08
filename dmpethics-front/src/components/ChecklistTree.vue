@@ -1,0 +1,61 @@
+<!-- Represents tree structure and other form fields.-->
+<template>
+
+  <div class="container"> 
+    <div v-show="submitted">
+      <p>Successfully submitted!</p>
+    </div> 
+    <div v-show="!submitted">
+      <div class="form-wiki-row">
+      </div>            
+          <checklist-node-tree :checklist="selectedAnswers"></checklist-node-tree>
+          <!--<div><button class="submitChecklist" @click="saveChecked">Save</button></div>-->
+    </div>
+  </div>
+</template>
+
+<script>
+import ChecklistNodeTree from "./ChecklistNodeTree";
+import axios from "axios";
+
+export default {
+  props: {
+    answerData: Object
+  },
+  data() {
+    return{
+      studytitle: this.answerData.study,
+      questiondata: this.fullData,
+      existingdata: "",
+      submitted: false,
+      error: false,
+    }
+  },
+  computed:{
+    selectedAnswers (){
+        return JSON.parse(this.answerData.data).questiondata
+    }
+ },
+  components: {
+    ChecklistNodeTree
+  },
+  methods: {
+
+    getAnswers() {
+      var params = {
+        'title': this.studytitle
+      };
+      axios
+      .get('http://localhost:3000/smwapi', params)
+      .then(response => {
+        this.existingdata = response.existingdata;
+      })
+   
+    },
+    saveChecked() {
+        axios.put('http://localhost:3000/answers/'+this.answerData.id+'/', {answer: {study: this.studytitle, data: JSON.stringify(this.answerData)}})
+      } 
+  }
+  
+};
+</script>

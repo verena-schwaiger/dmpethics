@@ -5,34 +5,39 @@
     <div class="wikilink">
       <a :href="'http://localhost/smw/index.php/'+encodeURI(answerData.study)">View your study's wiki page</a>
     </div>   
-    <div v-show="showFormValues">
-
- 
+    <div v-show="submitted">
       <p>Successfully submitted!</p>
     </div> 
-    <div v-show="!showFormValues">
-          <h3>Edit/Create your wiki page</h3>
-    <div class="form-wiki-field">
-      <label class="" :for="studytitle">Study title</label>
-      <input :value="answerData.study">
+    <!-- Errors point to network problems. -->
+    <div v-show="error">
+      <p>Error while submitting. Please reload the page and try again.</p>
     </div>
-      <div class="form-field">
+    <div v-show="!submitted">
+      <h3>Edit/Create your wiki page</h3>
+      <div class="form-wiki-row">
+          <label class="" :for="studytitle">Study title</label>
+          <input :value="answerData.study">
+
+          <label class="" :for="studytitle">Existing Application PID</label>
+          <input type="text" class="input" name="applicationpid" v-model="applicationpid">
+
           <label class="form-label">Main institution for the study</label>
           <input type="text" class="input" name="institution" v-model="institution">
+
+          <label class="form-label">Country</label>
+          <input type="text" class="input" name="country" v-model="country">
       </div>
-      <div class="form-field">
-        <label class="form-label">Country</label>
-        <input type="text" class="input" name="country" v-model="country">
-      </div>
-      <div class="form-field">
-        <label class="form-label">Study description</label><br>
-        <textarea name="studydesc" v-model="studydesc"></textarea>
-      </div>
-        <answer-node-tree :answers="selectedAnswers" @input="handleFile"></answer-node-tree>
-        <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
-    </div>
+
+        <div class="form-field">
+          <label class="form-label">Study description</label><br>
+          <textarea name="studydesc" v-model="studydesc"></textarea>
+        </div>              
+
+          <answer-node-tree :answers="selectedAnswers" v-on:addedfile="handleFileUpload"></answer-node-tree>
+          <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
     </div>
 
+  </div>
 </template>
 
 <script>
@@ -50,29 +55,42 @@ export default {
       studydesc: "",
       institution: "",
       country: "",
+      applicationpid: "",
       existingdata: "",
       files:[],
-      showFormValues: false
+      submitted: false,
+      error: false,
+      fields: [
+        'applicationpid',
+        'institution',
+        'country',
+      ]
     }
   },
   computed:{
     selectedAnswers (){
-      return JSON.parse(this.answerData.data)
+      return JSON.parse(this.answerData.data).questiondata
     }
  },
   components: {
     AnswerNodeTree
   },
   methods: {
-    handleFile(event){
-      this.files.push(event);
+    handleFileUpload: function(event){
+      alert("y");
+       this.files.push(event);
     },
+
     getAnswers() {
+      var params = {
+        'title': this.studytitle
+      };
       axios
-      .get('http://10.0.0.2:80/smw/api.php?action=parse&page=Main_Page&format=json')
+      .get('http://localhost:3000/smwapi', params)
       .then(response => {
-        this.existingdata = response;
+        this.existingdata = response.existingdata;
       })
+   
     },
     saveAnswer() {
       var params = {
@@ -84,8 +102,12 @@ export default {
        axios
       .post('http://localhost:3000/smwapi', params)
       .then(response => {
-        this.existingdata = response;
-        this.showFormValues = true;
+        if(response.status === 200){
+          this.submitted = true;
+        }
+        else{
+          this.error = true;
+        }
       })
       } 
   }
