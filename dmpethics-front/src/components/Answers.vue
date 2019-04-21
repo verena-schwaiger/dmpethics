@@ -5,13 +5,13 @@
     <div v-for="answer in answers" :key="answer.id">
       <div v-if="answer.study != ''" class="study">
         <div class="study-header">
-          <a href="#" @click="isSelected=answer.study">{{ answer.study }}</a>
+          <a href="#" v-on:click="isSelected=answer.study; tabselect=1">{{ answer.study }}</a>
         </div>
         <div v-if="isSelected === answer.study" class="form-wiki-outer">
           <div class="tabs">
             <a v-on:click="tabselect=1" v-bind:class="[ tabselect === 1 ? 'active' : '' ]">Edit/Create Wiki page</a>
             <a v-on:click="tabselect=2" v-bind:class="[ tabselect === 2 ? 'active' : '' ]">Checklist</a>
-            <a v-on:click="tabselect=3" v-bind:class="[ tabselect === 3 ? 'active' : '' ]">Update Questionnaire</a>
+            <a v-on:click="tabselect=3" v-bind:class="[ tabselect === 3 ? 'active' : '' ]">Update/Review Questionnaire</a>
           </div>
           <div class="form-wiki">
             <div v-if="tabselect === 1">
@@ -22,13 +22,7 @@
             </div>
             <div v-if="tabselect === 3">
               <questionnaire-edit :answer-data="answer"></questionnaire-edit>
-
             </div>
-            <div v-if="tabselect === 4">
-                            <questionnaire-tree></questionnaire-tree>
-
-              </div>
-          
           </div>
         </div>
       </div>
@@ -42,7 +36,6 @@
 import axios from 'axios'
 import AnswerTree from "./AnswerTree.vue"
 import ChecklistTree from "./ChecklistTree.vue"
-import QuestionnaireTree from "./QuestionnaireTree.vue"
 import QuestionnaireEdit from "./QuestionnaireEdit.vue"
 
 export default {
@@ -60,7 +53,7 @@ export default {
         return JSON.parse(a)
     }
   },
-  mounted () {
+  created () {
     axios
       .get('http://localhost:3000/answers/')
       .then(response => {
@@ -74,7 +67,6 @@ export default {
   components: {
       AnswerTree,
       ChecklistTree,
-      QuestionnaireTree,
       QuestionnaireEdit
     },
   methods: {

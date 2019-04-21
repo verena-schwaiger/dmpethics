@@ -8,8 +8,17 @@
       "category": "A",
       "label": "Are human participants involved?",
       "comment": "Informed consent is required",
-      "requirements": ["Consent form", "Patient information sheet"],
-      "requirementdone": false,
+      "requirements": [
+        {
+          "reqlabel": "Consent form",
+          "checked": false
+         },
+        {
+          "reqlabel": "Patient information sheet",
+          "checked": false
+         }
+      ],
+      
       "children": [
         {
           "id": "A00001",
@@ -17,8 +26,13 @@
           "category": "A",
           "label": "Are minors involved?",
           "comment": "Parental consent is required",
-          "requirements": ["Parental consent form"],
-          "requirementdone": false,
+          "requirements": [
+            {
+              "reqlabel": "Parental consent form",
+              "checked": false
+            }
+          ],
+          
           "children": [
             {
               "id": "A00003",
@@ -26,8 +40,12 @@
               "category": "A",
               "label": "Are any involved minors wards of the state?",
               "comment": "An advocate must be organized",
-              "requirements": ["Advocate's consent for wards of the state"],
-              "requirementdone": false,
+              "requirements": [
+                {
+                  "reqlabel": "Advocate's consent for wards of the state",
+                  "checked": false
+                }],
+              
               "children": [
 
               ]
@@ -42,7 +60,7 @@
           "label": "Are pregnant women involved?",
           "comment": "",
           "requirements": [],
-          "requirementdone": false,
+          
           "children": [
 
           ]
@@ -54,7 +72,7 @@
           "label": "Are prisoners involved?",
           "comment": "Study should be relevant to and specifically thematize prisoners",
           "requirements": [],
-          "requirementdone": false,
+          
           "children": [
 
           ]
@@ -66,7 +84,7 @@
           "label": "Are participants involved who aren't native speakers of your study's language?",
           "comment": "Study details should be easy to understand",
           "requirements": [],
-          "requirementdone": false,
+          
           "children": [
 
           ]
@@ -78,7 +96,7 @@
           "label": "Are any illiterate participants involved?",
           "comment": "Participants should be appropriately informed",
           "requirements": [],
-          "requirementdone": false,
+          
           "children": [
 
           ]
@@ -90,7 +108,7 @@
          "label": "Are psychologically vulnerable participants involved?",
          "comment": "The involvement should be justified",
          "requirements": [],
-         "requirementdone": false,
+         
          "children": [
 
          ]
@@ -102,7 +120,7 @@
        "label": "Are any of the researchers a study subject themselves?",
        "comment": "Consent of the researcher is explicitly required",
        "requirements": [],
-       "requirementdone": false,
+       
        "children": [
 
        ]
@@ -114,7 +132,7 @@
          "label": "Is there any risk of psychological or physical harm for participants?",
          "comment": "Any risks should be described and justified",
          "requirements": [],
-         "requirementdone": false,
+         
          "children": [
 
          ]
@@ -125,8 +143,12 @@
        "category": "A",
        "label": "Are there any potential gatekeepers, such as schools or nursing homes?",
        "comment": "Get permission from the gatekeepers.",
-       "requirements": ["Gatekeeper's permissions (school, nursing home, ...)"],
-       "requirementdone": false,
+       "requirements": [
+         {
+           "reqlabel": "Gatekeeper's permissions (school, nursing home, ...)",
+          "checked": false
+         }],
+       
        "children": [
 
        ]
@@ -138,7 +160,7 @@
          "label": "Do participants have knowledge of observation and data collection?",
          "comment": "",
          "requirements": [],
-         "requirementdone": false,
+         
          "children": [
 
          ]
@@ -153,7 +175,7 @@
       "label": "Are animals involved?",
       "comment": "",
       "requirements": [],
-      "requirementdone": false,
+      
       "children": [
           {
             "id": "B00001",
@@ -162,7 +184,7 @@
             "label": "Are the animals vertrebrates?",
             "comment": "",
             "requirements": [],
-            "requirementdone": false,
+            
             "children": [
             ]
           },
@@ -173,7 +195,7 @@
             "label": "Are the animals non-vertrebrates, and not cephalopods?",
             "comment": "No ethics approval is needed!",
             "requirements": [],
-            "requirementdone": false,
+            
             "children": [
             ]
           },
@@ -184,7 +206,7 @@
             "label": "Are the animals cephalopods?",
             "comment": "",
             "requirements": [],
-            "requirementdone": false,
+            
             "children": [
             ]
           }
@@ -198,7 +220,7 @@
     "label": "Does your study involve the environment, fieldwork, or existing structures or monuments?",
     "comment": "",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
           {
             "id": "D00001",
@@ -207,7 +229,7 @@
             "label": "Could there be potential risk for the environment?",
             "comment": "Detail the potentical risks in your application.",
             "requirements": [],
-            "requirementdone": false,
+            
             "children": [
             ]
           },
@@ -218,7 +240,7 @@
           "label": "Does your study involve work on existing monuments?",
           "comment": "Get permission from the parties responsible for the monument.",
           "requirements": ["Permission from responsible offical for the monument"],
-          "requirementdone": false,
+          
           "children": [
               {
                 "id": "D00004",
@@ -227,7 +249,7 @@
                 "label": "Is there any form of altering or potentially damaging a monument involved?",
                 "comment": "Provide details in application",
                 "requirements": [],
-                "requirementdone": false,
+                
                 "children": [
                 ]
               }
@@ -239,8 +261,12 @@
             "category": "D",
             "label": "Will your study take place on private property?",
             "comment": "Get permission and consent from the owner",
-            "requirements": ["Consent from private property owner"],
-            "requirementdone": false,
+            "requirements": [
+              {
+                "reqlabel": "Consent from private property owner",
+                "checked": false
+              }],
+            
             "children": [
             ]
           }
@@ -254,7 +280,7 @@
   "label": "Expand organizational questions",
   "comment": "",
   "requirements": [],
-  "requirementdone": false,
+  
   "children": [
   {
     "id": "C00001",
@@ -263,7 +289,7 @@
     "label": "Are you, the researcher, a student?",
     "comment": "The application form will require your supervisor's signature.",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
     ]
   },
@@ -274,7 +300,7 @@
     "label": "Do you collect data outside the country where you will apply for ethics approval?",
     "comment": "Consult w.r.t. safety guidelines for travelling and fieldwork.",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
     ]
   },
@@ -285,7 +311,7 @@
     "label": "Will the fieldwork in that country come with specific physical or psychological risks for involved researchers?",
     "comment": "Describe the risks in your application",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
     ]
   },
@@ -296,7 +322,7 @@
     "label": "Is your institution not the only institution involved in any way or form?",
     "comment": "Collect approval from all involved institutions.",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
     ]
   },
@@ -307,7 +333,7 @@
     "label": "Could your study results be misused, for example for military purposes?",
     "comment": "",
     "requirements": [],
-    "requirementdone": false,
+    
     "children": [
     ]
   }

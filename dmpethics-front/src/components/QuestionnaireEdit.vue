@@ -2,7 +2,17 @@
 <template>
   <div class="container">
     <tree :question-data="this.questions.questiondata"></tree>
-    <button class="submitQuestionnaire" @click="saveAnswer">Update</button>
+    <div v-show="submitted">
+      <p>Successfully submitted!</p>
+    </div> 
+    <div v-show="!submitted">
+        <button class="submitQuestionnaire" @click="saveAnswer">Update</button>
+    </div> 
+    <!-- Errors point to network problems. -->
+    <div v-show="error">
+      <p>Error while submitting. Please reload the page and try again.</p>
+    </div> 
+    
 </div>
 </template>
 
@@ -15,8 +25,11 @@ export default {
     props: {
     answerData: Object
     },
-    data(){ return {"studytitle": '',
-    "questions": Object
+    data(){ return {
+        studytitle: this.answerData.study,
+        questions: Object,
+        submitted: false,
+        error: false
     }
     },
     components: {
@@ -29,6 +42,14 @@ export default {
     methods: {
         saveAnswer(){
             axios.put('http://localhost:3000/answers/'+this.answerData.id+'/', {answer: {study: this.studytitle, data: JSON.stringify(this.questions)}})
+            .then(response => {
+                if(response.status === 200){
+                    this.submitted = true;
+                }
+                else{
+                    this.error = true;
+                }
+            })
         }
     } 
 };

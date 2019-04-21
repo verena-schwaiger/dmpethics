@@ -2,7 +2,7 @@ class SmwapiController < ApplicationController
   include SmwapiHelper
 
   def create
-    addStudy(params[:title], params[:country], params[:institution], params[:description])
+    addStudy(params[:id], params[:title], params[:country], params[:institution], params[:description])
     render json: {
         status: 200,
         message: "Success",
@@ -10,7 +10,7 @@ class SmwapiController < ApplicationController
   end
 
   def index
-    res = getExistingData(params[:title])
+    res = getExistingData(params[:id])
     render json: {
         status: 200,
         message: "Success",

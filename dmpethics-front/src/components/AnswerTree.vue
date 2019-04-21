@@ -3,16 +3,10 @@
 
   <div class="container">
     <div class="wikilink">
-      <a :href="'http://localhost/smw/index.php/'+encodeURI(answerData.study)">View your study's wiki page</a>
+      <a :href="'http://localhost/smw/index.php/'+encodeURI(answerData.id)">View your study's wiki page</a>
     </div>   
-    <div v-show="submitted">
-      <p>Successfully submitted!</p>
-    </div> 
-    <!-- Errors point to network problems. -->
-    <div v-show="error">
-      <p>Error while submitting. Please reload the page and try again.</p>
-    </div>
-    <div v-show="!submitted">
+  
+    <div>
       <h3>Edit/Create your wiki page</h3>
       <div class="form-wiki-row">
           <label class="" :for="studytitle">Study title</label>
@@ -31,17 +25,26 @@
         <div class="form-field">
           <label class="form-label">Study description</label><br>
           <textarea name="studydesc" v-model="studydesc"></textarea>
-        </div>              
-
-          <answer-node-tree :answers="selectedAnswers" v-on:addedfile="handleFileUpload"></answer-node-tree>
-          <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
+        </div>    
+        <div v-show="submitted">
+          <p>Successfully submitted!</p>
+        </div> 
+        <div v-show="!submitted">
+            <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
+        </div> 
+        <!-- Errors point to network problems. -->
+        <div v-show="error">
+          <p>Error while submitting. Please reload the page and try again.</p>
+        </div>           
+        <p></p>
+        <!--<answer-node-tree :answers="selectedAnswers" :studytitle="this.answerData.id" v-on:addedfile="handleFileUpload"></answer-node-tree>-->
     </div>
 
   </div>
 </template>
 
 <script>
-import AnswerNodeTree from "./AnswerNodeTree";
+//import AnswerNodeTree from "./AnswerNodeTree";
 import axios from "axios";
 
 export default {
@@ -52,6 +55,7 @@ export default {
   data() {
     return{
       studytitle: this.answerData.study,
+      id: this.answerData.id,
       studydesc: "",
       institution: "",
       country: "",
@@ -73,11 +77,10 @@ export default {
     }
  },
   components: {
-    AnswerNodeTree
+    //AnswerNodeTree
   },
   methods: {
     handleFileUpload: function(event){
-      alert("y");
        this.files.push(event);
     },
 
@@ -94,6 +97,7 @@ export default {
     },
     saveAnswer() {
       var params = {
+        'id': this.id,
         'title': this.studytitle,
         'country': this.country,
         'institution': this.institution,

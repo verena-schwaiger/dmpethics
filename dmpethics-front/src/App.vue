@@ -25,6 +25,22 @@ body {
     padding: 20px;
 }
 
+a:link {
+  color: #43669e;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #afafaf;
+}
+
+.requirement {
+  color: #afafaf;
+}
+
 .navlink {
   margin-left: 20px;
 }
@@ -97,7 +113,7 @@ div.box {
 }
 
 .study-header a:link, a:visited{
-  color: #808080;
+  color: #43669e;
   display: inline-block;
 }
 
@@ -123,8 +139,11 @@ div.box {
 .form-wiki-field{
   padding: 10px;
 }
+.form-wiki-docs{
+  padding: 10px;
+}
 .columns {
-  column-width: 200px;
+  column-width: 300px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -142,6 +161,15 @@ div.box {
 }
 .form-checklist-field {
   column-width: 100px;
+}
+
+.form-checklist-row {
+  padding: 5px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+  padding: 10px;
 }
 
 .form-field {

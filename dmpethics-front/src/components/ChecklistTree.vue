@@ -2,15 +2,17 @@
 <template>
 
   <div class="container"> 
+    <checklist-node-tree :checklist="questiondata.questiondata" :studytitle="answerData.id"></checklist-node-tree>
+    <div><button class="submitChecklist" @click="saveChecked">Save</button></div>
     <div v-show="submitted">
       <p>Successfully submitted!</p>
     </div> 
-    <div v-show="!submitted">
-      <div class="form-wiki-row">
-      </div>            
-          <checklist-node-tree :checklist="selectedAnswers"></checklist-node-tree>
-          <!--<div><button class="submitChecklist" @click="saveChecked">Save</button></div>-->
-    </div>
+
+    <!-- Errors point to network problems. -->
+    <div v-show="error">
+      <p>Error while submitting. Please reload the page and try again.</p>
+    </div> 
+   
   </div>
 </template>
 
@@ -25,7 +27,8 @@ export default {
   data() {
     return{
       studytitle: this.answerData.study,
-      questiondata: this.fullData,
+      questiondata: JSON.parse(this.answerData.data),
+      list: null,
       existingdata: "",
       submitted: false,
       error: false,
@@ -53,7 +56,16 @@ export default {
    
     },
     saveChecked() {
-        axios.put('http://localhost:3000/answers/'+this.answerData.id+'/', {answer: {study: this.studytitle, data: JSON.stringify(this.answerData)}})
+        axios.put('http://localhost:3000/answers/'+this.answerData.id+'/', {answer: {id: this.answerData.id, data: JSON.stringify(this.questiondata)}})
+        .then(response => {
+          if(response.status === 200){
+              this.submitted = true;
+              this.$forceUpdate();
+          }
+          else{
+              this.error = true;
+          }
+      })
       } 
   }
   
