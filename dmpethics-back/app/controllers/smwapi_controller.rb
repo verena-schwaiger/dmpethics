@@ -1,14 +1,16 @@
 class SmwapiController < ApplicationController
   include SmwapiHelper
 
+  # POST
   def create
-    addStudy(params[:id], params[:title], params[:country], params[:institution], params[:description])
+    add_study(params[:id], params[:title], params[:country], params[:institution], params[:description])
     render json: {
         status: 200,
         message: "Success",
     }.to_json
   end
 
+  # GET
   def index
     res = getExistingData(params[:id])
     render json: {

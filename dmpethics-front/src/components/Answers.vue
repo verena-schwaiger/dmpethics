@@ -12,6 +12,8 @@
             <a v-on:click="tabselect=1" v-bind:class="[ tabselect === 1 ? 'active' : '' ]">Edit/Create Wiki page</a>
             <a v-on:click="tabselect=2" v-bind:class="[ tabselect === 2 ? 'active' : '' ]">Checklist</a>
             <a v-on:click="tabselect=3" v-bind:class="[ tabselect === 3 ? 'active' : '' ]">Update/Review Questionnaire</a>
+            <a v-on:click="tabselect=4" v-bind:class="[ tabselect === 4 ? 'active' : '' ]">Similar Studies</a>
+
           </div>
           <div class="form-wiki">
             <div v-if="tabselect === 1">
@@ -22,6 +24,9 @@
             </div>
             <div v-if="tabselect === 3">
               <questionnaire-edit :answer-data="answer"></questionnaire-edit>
+            </div>
+            <div v-if="tabselect === 4">
+              <similar-studies :answer-data="answer"></similar-studies>
             </div>
           </div>
         </div>
@@ -37,6 +42,7 @@ import axios from 'axios'
 import AnswerTree from "./AnswerTree.vue"
 import ChecklistTree from "./ChecklistTree.vue"
 import QuestionnaireEdit from "./QuestionnaireEdit.vue"
+import SimilarStudies from "./SimilarStudies.vue"
 
 export default {
  data() {
@@ -67,7 +73,8 @@ export default {
   components: {
       AnswerTree,
       ChecklistTree,
-      QuestionnaireEdit
+      QuestionnaireEdit,
+      SimilarStudies
     },
   methods: {
 

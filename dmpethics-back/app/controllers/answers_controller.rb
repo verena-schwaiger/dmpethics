@@ -1,4 +1,5 @@
 class AnswersController < ApplicationController
+  include AnswersHelper
   before_action :set_answer, only: [:show, :update, :destroy]
   # GET /answers
   def index
@@ -8,8 +9,31 @@ class AnswersController < ApplicationController
 
   # GET /answers/1
   def show
-    render json: @answer
+    recommendations = Array.new
+    if Answer.find(params['id']).topics != nil
+      # Recommendation system: find all studies that share at least $ratio-limit topics
+      studies = Answer.where.not(id: params['id'])
+      topicarray = Answer.find(params['id']).topics.split(",")
+      studies.each do |study|
+        if study.topics.present?
+          studyarray = study.topics.split(",")
+          intersection = topicarray & studyarray
+          ratio = intersection.size.to_f / studyarray.size
+          if ratio > 0.4
+              recommendations.push(study.id)
+              puts study.id
+          end
+        end
+      end
+    end
+    #render json: @answer
+    render json:{
+      status: 200,
+      study: @answer,
+      recommendations: recommendations
+    }
   end
+
 
   # POST /answers
   def create
@@ -24,11 +48,11 @@ class AnswersController < ApplicationController
 
   # PATCH/PUT /answers/1
   def update
-    answer = Answer.find(params['id'])
-    if answer.update(answer_params)
-      render json: answer
+    #answer = Answer.find(params['id'])
+    if @answer.update(answer_params)
+      render json: @answer
     else
-      render json: answer.errors, status: :unprocessable_entity
+      render json: @answer.errors, status: :unprocessable_entity
     end
   end
 
@@ -45,6 +69,6 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:id, :study, :data)
+      params.require(:answer).permit(:id, :study, :data, :topics, :pid, :country, :institutions)
     end
 end

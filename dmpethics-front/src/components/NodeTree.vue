@@ -2,7 +2,7 @@
   <div class="node-tree">
     <div v-if="node.label == 'root'" class="question">
        <div>
-            <node v-for="child in node.children" :node="child" :key="child.id"></node>
+            <node-tree v-for="child in node.children" :node="child" :key="child.id"></node-tree>
        </div>
     </div>
     <div v-else class="question">
@@ -14,7 +14,7 @@
                 </div>
             </div>
        <div v-if="node.checked">
-            <node v-for="child in node.children" :node="child" :key="child.id"></node>
+            <node-tree v-for="child in node.children" :node="child" :key="child.id"></node-tree>
        </div>
 
     </div>
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "node",
+  name: "node-tree",
   props: {
     node: Object
   }

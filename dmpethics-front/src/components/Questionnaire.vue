@@ -31,8 +31,7 @@ export default {
     },
   methods: {
     saveAnswer(){
-      Promise.all([axios.post('http://localhost:3000/answers', {answer: {study: this.studytitle, data: JSON.stringify(this.questions)}}),
-                  axios.post('http://localhost:3000/study_details', {study_detail: {user_id: "1", study_id: this.studytitle, institution: this.institution, study_description: this.studydesc}})])
+      axios.post('http://localhost:3000/answers', {answer: {study: this.studytitle, data: JSON.stringify(this.questions)}})
         .then(function () {
         router.replace('/answers');
            })

@@ -20,17 +20,19 @@
 
           <label class="form-label">Country</label>
           <input type="text" class="input" name="country" v-model="country">
+          
+          <label class="form-label">Topics</label>
+          <input type="text" class="input" name="topics" v-model="topics">
       </div>
 
         <div class="form-field">
           <label class="form-label">Study description</label><br>
           <textarea name="studydesc" v-model="studydesc"></textarea>
         </div>    
+
+        <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>        
         <div v-show="submitted">
           <p>Successfully submitted!</p>
-        </div> 
-        <div v-show="!submitted">
-            <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
         </div> 
         <!-- Errors point to network problems. -->
         <div v-show="error">
@@ -57,9 +59,10 @@ export default {
       studytitle: this.answerData.study,
       id: this.answerData.id,
       studydesc: "",
-      institution: "",
-      country: "",
-      applicationpid: "",
+      institution: this.answerData.institutions,
+      country: this.answerData.country,
+      topics: this.answerData.topics,
+      applicationpid: this.answerData.pid,
       existingdata: "",
       files:[],
       submitted: false,
@@ -103,11 +106,13 @@ export default {
         'institution': this.institution,
         'description': this.studydesc
       };
+      var nospaces = this.topics.replace(/\s/g, "");
        axios
       .post('http://localhost:3000/smwapi', params)
       .then(response => {
         if(response.status === 200){
           this.submitted = true;
+          return axios.put('http://localhost:3000/answers/' + this.id + '/', {answer: {id: this.id, topics: nospaces, pid:this.pid, country: this.country, institutions: this.institution}})
         }
         else{
           this.error = true;
