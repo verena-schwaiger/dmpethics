@@ -5,9 +5,9 @@
     <div v-for="answer in answers" :key="answer.id">
       <div v-if="answer.study != ''" class="study">
         <div class="study-header">
-          <a href="#" v-on:click="isSelected=answer.study; tabselect=1">{{ answer.study }}</a>
+          <a href="#" v-on:click="active=!active; isSelected=answer.study; tabselect=1">{{ answer.study }}</a>
         </div>
-        <div v-if="isSelected === answer.study" class="form-wiki-outer">
+        <div v-if="isSelected === answer.study && active" class="form-wiki-outer">
           <div class="tabs">
             <a v-on:click="tabselect=1" v-bind:class="[ tabselect === 1 ? 'active' : '' ]">Edit/Create Wiki page</a>
             <a v-on:click="tabselect=2" v-bind:class="[ tabselect === 2 ? 'active' : '' ]">Checklist</a>
@@ -49,6 +49,7 @@ export default {
   return {
    answers: [],
    details: [],
+   active: false,
    isSelected: false,
    errors: [],
    tabselect: 1
