@@ -12,7 +12,7 @@
             </div>
         </div>
         <div v-else>
-            Please add some topics!
+            You either haven't added keywords yet, or there are no studies with similar topics.
         </div>
     </div>
   </div>

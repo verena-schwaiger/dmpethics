@@ -3,7 +3,12 @@
 
   <div class="container"> 
     <checklist-node-tree :checklist="questiondata.questiondata" :studytitle="answerData.id"></checklist-node-tree>
-    <div><button class="submitChecklist" @click="saveChecked">Save</button></div>
+    <div v-show="!loading">
+      <button class="submitChecklist" @click="saveChecked">Save</button>   
+    </div>   
+    <div v-show="loading">
+      <img src="@/assets/loading.gif" width="70px" height="35px">
+    </div> 
     <div v-show="submitted">
       <p>Successfully submitted!</p>
     </div> 
@@ -32,6 +37,7 @@ export default {
       existingdata: "",
       submitted: false,
       error: false,
+      loading: false
     }
   },
   computed:{
@@ -56,14 +62,17 @@ export default {
    
     },
     saveChecked() {
+      this.loading = true;
         axios.put('http://localhost:3000/answers/'+this.answerData.id+'/', {answer: {id: this.answerData.id, data: JSON.stringify(this.questiondata)}})
         .then(response => {
           if(response.status === 200){
               this.submitted = true;
+              this.loading = false;
               this.$forceUpdate();
           }
           else{
               this.error = true;
+              this.loading = false;
           }
       })
       } 

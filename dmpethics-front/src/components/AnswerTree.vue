@@ -21,7 +21,7 @@
           <label class="form-label">Country</label>
           <input type="text" class="input" name="country" v-model="country">
           
-          <label class="form-label">Topics</label>
+          <label class="form-label">Keywords</label>
           <input type="text" class="input" name="topics" v-model="topics">
       </div>
 
@@ -30,7 +30,12 @@
           <textarea name="studydesc" v-model="studydesc"></textarea>
         </div>    
 
-        <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>        
+        <div v-show="!loading">
+          <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>   
+        </div>   
+        <div v-show="loading">
+          <img src="@/assets/loading.gif" width="70px" height="35px">
+        </div>  
         <div v-show="submitted">
           <p>Successfully submitted!</p>
         </div> 
@@ -67,6 +72,7 @@ export default {
       files:[],
       submitted: false,
       error: false,
+      loading: false,
       fields: [
         'applicationpid',
         'institution',
@@ -99,6 +105,7 @@ export default {
    
     },
     saveAnswer() {
+      this.loading = true;
       var params = {
         'id': this.id,
         'title': this.studytitle,
@@ -112,6 +119,7 @@ export default {
       .then(response => {
         if(response.status === 200){
           this.submitted = true;
+          this.loading = false;
           return axios.put('http://localhost:3000/answers/' + this.id + '/', {answer: {id: this.id, topics: nospaces, pid:this.pid, country: this.country, institutions: this.institution}})
         }
         else{
