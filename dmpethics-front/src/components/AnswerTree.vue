@@ -31,7 +31,11 @@
         </div>    
 
         <div v-show="!loading">
-          <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>   
+          <button class="button" @click="saveAnswer">Submit</button>   
+          <div align="right" class="delete"><button class="button" v-on:click="deleteStudy(); $emit('update-answer', id)">Delete study here and on Wiki</button></div>
+          <div align="right" class="delete"><button class="button" v-on:click="deleteStudyOnWiki(); $emit('update-answer', id)">Delete study only on Wiki</button></div>
+          <div align="right" class="delete"><button class="button" v-on:click="deleteStudyLocally(); $emit('update-answer', id)">Delete study only here</button></div>
+
         </div>   
         <div v-show="loading">
           <img src="@/assets/loading.gif" width="70px" height="35px">
@@ -56,9 +60,8 @@ import axios from "axios";
 
 export default {
   props: {
-    answerData: Object,
-    detailData: Object
-  },
+    answerData: Object
+      },
   data() {
     return{
       studytitle: this.answerData.study,
@@ -72,12 +75,7 @@ export default {
       files:[],
       submitted: false,
       error: false,
-      loading: false,
-      fields: [
-        'applicationpid',
-        'institution',
-        'country',
-      ]
+      loading: false
     }
   },
   computed:{
@@ -113,7 +111,10 @@ export default {
         'institution': this.institution,
         'description': this.studydesc
       };
-      var nospaces = this.topics.replace(/\s/g, "");
+      var nospaces = "";
+      if(this.topics !== null){
+        nospaces = this.topics.replace(/\s/g, "");
+      }
        axios
       .post('http://localhost:3000/smwapi', params)
       .then(response => {
@@ -126,7 +127,18 @@ export default {
           this.error = true;
         }
       })
-      } 
+      } ,
+    deleteStudy() {
+        Promise.all([axios.delete('http://localhost:3000/smwapi/' + this.id + '/'),
+                  axios.delete('http://localhost:3000/answers/' + this.id + '/')])
+
+      },
+    deleteStudyOnWiki() {
+      axios.delete('http://localhost:3000/smwapi/' + this.id + '/')
+    },
+    deleteStudyLocally() {
+      axios.delete('http://localhost:3000/answers/' + this.id + '/')
+    }
   }
   
 };

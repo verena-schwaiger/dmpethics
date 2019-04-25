@@ -20,4 +20,14 @@ class SmwapiController < ApplicationController
     }.to_json
 
   end
+
+  # DELETE /1/
+  def destroy
+    delete_study(params[:id])
+    render json: {
+      status: 200,
+      message: "Success"
+      }.to_json
+  end
+
 end

@@ -124,6 +124,10 @@ div.box {
   text-decoration: none;
 }
 
+.delete{
+  padding: 5px;
+}
+
 .form-wiki-outer{
     padding: 5%;
 
