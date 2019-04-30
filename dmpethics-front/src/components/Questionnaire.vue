@@ -5,8 +5,6 @@
         <label class="form-label">Study title</label>
         <input type="text" class="input" name="studytitle" v-model="studytitle">
     </div>
-
-
     <h3>Study details</h3>
     <tree :question-data="questions.questiondata"></tree>
     <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
@@ -26,9 +24,9 @@ export default {
   "questions":{
     questiondata
         }}),
-    components: {
-      Tree
-    },
+  components: {
+    Tree
+  },
   methods: {
     saveAnswer(){
       axios.post('http://localhost:3000/answers', {answer: {study: this.studytitle, data: JSON.stringify(this.questions)}})

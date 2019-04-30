@@ -1,4 +1,3 @@
-<!-- Represents tree structure and other form fields.-->
 <template>
 
   <div class="container"> 

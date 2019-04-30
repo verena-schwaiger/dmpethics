@@ -21,7 +21,6 @@ class AnswersController < ApplicationController
           ratio = intersection.size.to_f / studyarray.size
           if ratio > 0.4
               recommendations.push(study.id)
-              puts study.id
           end
         end
       end
@@ -69,6 +68,8 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:id, :study, :data, :topics, :pid, :country, :institutions)
+      params.require(:answer).permit(:id, :study, :title, :data, :topics, :pid, :country, :institution, :authors, :ethics, :description)
     end
 end
+
+

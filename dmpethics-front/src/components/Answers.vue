@@ -2,9 +2,6 @@
 <template>
 <div  class="container">
  <div id="answers">
-    <div v-show="loading">
-      <img src="@/assets/loading.gif" width="70px" height="35px">
-    </div> 
     <div v-for="answer in answers" :key="answer.id">
       <div v-if="answer.study != '' && deleted !== answer.id" class="study">
         <div class="study-header">
@@ -36,7 +33,9 @@
         </div>
       </div>
     </div>
-
+    <div v-show="loading">
+      <img src="@/assets/loading.gif" width="70px" height="35px">
+    </div> 
 </div>
  </div>
 </template>
@@ -84,13 +83,11 @@ export default {
     },
   methods: {
     reloadData(e){       
-      this.loading = true;
       this.deleted = e;
       axios
         .get('http://localhost:3000/answers/')
         .then(response => {
           this.answers = response.data;
-          this.loading = false;
         })
     }
   }

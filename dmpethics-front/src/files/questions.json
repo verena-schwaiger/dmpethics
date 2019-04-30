@@ -8,6 +8,7 @@
       "category": "A",
       "label": "Are human participants involved?",
       "comment": "Informed consent is required",
+      "keyword": "human",
       "requirements": [
         {
           "reqlabel": "Consent form",
@@ -26,6 +27,7 @@
           "category": "A",
           "label": "Are minors involved?",
           "comment": "Parental consent is required",
+          "keyword": "children",
           "requirements": [
             {
               "reqlabel": "Parental consent form",
@@ -40,6 +42,7 @@
               "category": "A",
               "label": "Are any involved minors wards of the state?",
               "comment": "An advocate must be organized",
+              "keyword": "wards of the state",
               "requirements": [
                 {
                   "reqlabel": "Advocate's consent for wards of the state",
@@ -59,6 +62,7 @@
           "category": "A",
           "label": "Are pregnant women involved?",
           "comment": "",
+          "keyword": "pregnant women",
           "requirements": [],
           
           "children": [
@@ -71,6 +75,7 @@
           "category": "A",
           "label": "Are prisoners involved?",
           "comment": "Study should be relevant to and specifically thematize prisoners",
+          "keyword": "prisoners",
           "requirements": [],
           
           "children": [
@@ -83,6 +88,7 @@
           "category": "A",
           "label": "Are participants involved who aren't native speakers of your study's language?",
           "comment": "Study details should be easy to understand",
+          "keyword": "non-native speakers",
           "requirements": [],
           
           "children": [
@@ -95,6 +101,7 @@
           "category": "A",
           "label": "Are any illiterate participants involved?",
           "comment": "Participants should be appropriately informed",
+          "keyword": "illiterate",
           "requirements": [],
           
           "children": [
@@ -107,6 +114,7 @@
          "category": "A",
          "label": "Are psychologically vulnerable participants involved?",
          "comment": "The involvement should be justified",
+         "keyword": "psychologically vulnerable",
          "requirements": [],
          
          "children": [
@@ -119,6 +127,7 @@
        "category": "A",
        "label": "Are any of the researchers a study subject themselves?",
        "comment": "Consent of the researcher is explicitly required",
+       "keyword": "self-study",
        "requirements": [],
        
        "children": [
@@ -131,6 +140,7 @@
          "category": "A",
          "label": "Is there any risk of psychological or physical harm for participants?",
          "comment": "Any risks should be described and justified",
+         "keyword": "",
          "requirements": [],
          
          "children": [
@@ -143,6 +153,7 @@
        "category": "A",
        "label": "Are there any potential gatekeepers, such as schools or nursing homes?",
        "comment": "Get permission from the gatekeepers.",
+       "keyword": "",
        "requirements": [
          {
            "reqlabel": "Gatekeeper's permissions (school, nursing home, ...)",
@@ -159,6 +170,7 @@
          "category": "A",
          "label": "Do participants have knowledge of observation and data collection?",
          "comment": "",
+         "keyword": "",
          "requirements": [],
          
          "children": [
@@ -174,6 +186,7 @@
       "category": "B",
       "label": "Are animals involved?",
       "comment": "",
+      "keyword": "animals",
       "requirements": [],
       
       "children": [
@@ -183,6 +196,7 @@
             "category": "B",
             "label": "Are the animals vertrebrates?",
             "comment": "",
+            "keyword": "vertebrates",
             "requirements": [],
             
             "children": [
@@ -194,6 +208,7 @@
             "category": "B",
             "label": "Are the animals non-vertrebrates, and not cephalopods?",
             "comment": "No ethics approval is needed!",
+            "keyword": "non-vertebrates",
             "requirements": [],
             
             "children": [
@@ -205,6 +220,7 @@
             "category": "B",
             "label": "Are the animals cephalopods?",
             "comment": "",
+            "keyword": "cephalopods",
             "requirements": [],
             
             "children": [
@@ -219,6 +235,7 @@
     "category": "D",
     "label": "Does your study involve the environment, fieldwork, or existing structures or monuments?",
     "comment": "",
+    "keyword": "",
     "requirements": [],
     
     "children": [
@@ -228,6 +245,7 @@
             "category": "D",
             "label": "Could there be potential risk for the environment?",
             "comment": "Detail the potentical risks in your application.",
+            "keyword": "environment",
             "requirements": [],
             
             "children": [
@@ -239,7 +257,12 @@
           "category": "D",
           "label": "Does your study involve work on existing monuments?",
           "comment": "Get permission from the parties responsible for the monument.",
-          "requirements": ["Permission from responsible offical for the monument"],
+          "keyword": "monuments",
+          "requirements": [
+            {
+              "reqlabel": "Permission from responsible offical for the monument",
+              "checked": false
+            }],
           
           "children": [
               {
@@ -248,6 +271,7 @@
                 "category": "D",
                 "label": "Is there any form of altering or potentially damaging a monument involved?",
                 "comment": "Provide details in application",
+                "keyword": "",
                 "requirements": [],
                 
                 "children": [
@@ -261,6 +285,7 @@
             "category": "D",
             "label": "Will your study take place on private property?",
             "comment": "Get permission and consent from the owner",
+            "keyword": "private property",
             "requirements": [
               {
                 "reqlabel": "Consent from private property owner",
@@ -279,6 +304,7 @@
   "category": "C",
   "label": "Expand organizational questions",
   "comment": "",
+  "keyword": "",
   "requirements": [],
   
   "children": [
@@ -288,6 +314,7 @@
     "category": "C",
     "label": "Are you, the researcher, a student?",
     "comment": "The application form will require your supervisor's signature.",
+    "keyword": "",
     "requirements": [],
     
     "children": [
@@ -299,6 +326,7 @@
     "category": "C",
     "label": "Do you collect data outside the country where you will apply for ethics approval?",
     "comment": "Consult w.r.t. safety guidelines for travelling and fieldwork.",
+    "keyword": "",
     "requirements": [],
     
     "children": [
@@ -310,6 +338,7 @@
     "category": "C",
     "label": "Will the fieldwork in that country come with specific physical or psychological risks for involved researchers?",
     "comment": "Describe the risks in your application",
+    "keyword": "",
     "requirements": [],
     
     "children": [
@@ -321,6 +350,7 @@
     "category": "C",
     "label": "Is your institution not the only institution involved in any way or form?",
     "comment": "Collect approval from all involved institutions.",
+    "keyword": "",
     "requirements": [],
     
     "children": [
@@ -332,6 +362,7 @@
     "category": "C",
     "label": "Could your study results be misused, for example for military purposes?",
     "comment": "",
+    "keyword": "",
     "requirements": [],
     
     "children": [

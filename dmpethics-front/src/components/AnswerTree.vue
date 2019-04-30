@@ -12,10 +12,13 @@
           <label class="" :for="studytitle">Study title</label>
           <input :value="answerData.study">
 
+          <label class="form-label">Author(s)</label>
+          <input type="text" class="input" name="author" v-model="author">
+
           <label class="" :for="studytitle">Existing Application PID</label>
           <input type="text" class="input" name="applicationpid" v-model="applicationpid">
 
-          <label class="form-label">Main institution for the study</label>
+          <label class="form-label">Involved institution(s)</label>
           <input type="text" class="input" name="institution" v-model="institution">
 
           <label class="form-label">Country</label>
@@ -23,6 +26,9 @@
           
           <label class="form-label">Keywords</label>
           <input type="text" class="input" name="topics" v-model="topics">
+
+          <label class="form-label">Ethics factors</label>
+          <input type="text" class="input" name="ethics" v-model="ethics">
       </div>
 
         <div class="form-field">
@@ -31,7 +37,9 @@
         </div>    
 
         <div v-show="!loading">
-          <button class="button" @click="saveAnswer">Submit</button>   
+          <button class="button" @click="saveAnswer">Save and submit to Wiki</button>  
+          <button class="button" @click="saveAnswerLocally">Save without submitting to Wiki</button>   
+ 
           <div align="right" class="delete"><button class="button" v-on:click="deleteStudy(); $emit('update-answer', id)">Delete study here and on Wiki</button></div>
           <div align="right" class="delete"><button class="button" v-on:click="deleteStudyOnWiki(); $emit('update-answer', id)">Delete study only on Wiki</button></div>
           <div align="right" class="delete"><button class="button" v-on:click="deleteStudyLocally(); $emit('update-answer', id)">Delete study only here</button></div>
@@ -71,24 +79,45 @@ export default {
       country: this.answerData.country,
       topics: this.answerData.topics,
       applicationpid: this.answerData.pid,
+      author: this.answerData.author,
+      ethics: this.getEthicsFactors(),
       existingdata: "",
+      nospaces: "",
       files:[],
       submitted: false,
       error: false,
       loading: false
     }
   },
-  computed:{
-    selectedAnswers (){
-      return JSON.parse(this.answerData.data).questiondata
-    }
- },
+
   components: {
     //AnswerNodeTree
   },
   methods: {
     handleFileUpload: function(event){
        this.files.push(event);
+    },
+
+    getEthicsFactors(){
+      var ethicsFactors = [], questions = JSON.parse(this.answerData.data).questiondata.children;
+      for (var i = 0; i < questions.length; i++) {
+        var q = questions[i];
+        if (q.keyword !== "" && q.checked === true)
+          ethicsFactors.push(q.keyword);
+        for(var j = 0; j < q.children.length; j++){
+          if (q.children[j].keyword !== "" && q.children[j].checked === true)
+            ethicsFactors.push(q.children[j].keyword);
+          for (var k = 0; k < q.children[j].length; k++){
+            if (q.children[j].children[k].keyword !== "" && q.children[j].children[k].checked === true)
+              ethicsFactors.push(q.children[j].children[k].keyword);
+          }
+        }
+      }
+    return ethicsFactors;
+      /*if (q.children && q.children[0]) {
+        return getEthicsFactors(q.children[0]);
+      }
+      return q;*/
     },
 
     getAnswers() {
@@ -104,34 +133,68 @@ export default {
     },
     saveAnswer() {
       this.loading = true;
+      if(this.topics !== null){
+        this.nospaces = this.topics.replace(/\s/g, "");
+      }
       var params = {
         'id': this.id,
         'title': this.studytitle,
         'country': this.country,
         'institution': this.institution,
-        'description': this.studydesc
+        'description': this.studydesc,
+        'authors': this.author,
+        'pid': this.applicationpid,
+        'topics': this.topics,
+        'ethics': this.ethics.toString()
       };
-      var nospaces = "";
-      if(this.topics !== null){
-        nospaces = this.topics.replace(/\s/g, "");
-      }
+
        axios
       .post('http://localhost:3000/smwapi', params)
       .then(response => {
         if(response.status === 200){
           this.submitted = true;
           this.loading = false;
-          return axios.put('http://localhost:3000/answers/' + this.id + '/', {answer: {id: this.id, topics: nospaces, pid:this.pid, country: this.country, institutions: this.institution}})
+          return axios.put('http://localhost:3000/answers/' + this.id + '/', params)
         }
         else{
           this.error = true;
         }
       })
       } ,
+    saveAnswerLocally() {
+      this.loading = true;
+
+      if(this.topics !== null){
+        this.nospaces = this.topics.replace(/\s/g, "");
+      }
+
+      var params = {
+        'id': this.id,
+        'title': this.studytitle,
+        'country': this.country,
+        'institution': this.institution,
+        'description': this.studydesc,
+        'authors': this.author,
+        'pid': this.applicationpid,
+        'topics': this.topics,
+        'ethics': this.ethics.toString()
+      };
+
+       axios
+      .put('http://localhost:3000/answers/' + this.id + '/', params)
+      .then(response => {
+        if(response.status === 200){
+          this.submitted = true;
+          this.loading = false;
+        }
+        else{
+          this.error = true;
+        }
+      })
+    } ,
     deleteStudy() {
         Promise.all([axios.delete('http://localhost:3000/smwapi/' + this.id + '/'),
-                  axios.delete('http://localhost:3000/answers/' + this.id + '/')])
-
+          axios.delete('http://localhost:3000/answers/' + this.id + '/')])
       },
     deleteStudyOnWiki() {
       axios.delete('http://localhost:3000/smwapi/' + this.id + '/')
