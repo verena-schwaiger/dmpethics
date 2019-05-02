@@ -74,12 +74,12 @@ export default {
     return{
       studytitle: this.answerData.study,
       id: this.answerData.id,
-      studydesc: "",
+      studydesc: this.answerData.description,
       institution: this.answerData.institutions,
       country: this.answerData.country,
       topics: this.answerData.topics,
       applicationpid: this.answerData.pid,
-      author: this.answerData.author,
+      author: this.answerData.authors,
       ethics: this.getEthicsFactors(),
       existingdata: "",
       nospaces: "",
@@ -133,6 +133,7 @@ export default {
     },
     saveAnswer() {
       this.loading = true;
+      this.submitted =false;
       if(this.topics !== null){
         this.nospaces = this.topics.replace(/\s/g, "");
       }
@@ -140,11 +141,11 @@ export default {
         'id': this.id,
         'title': this.studytitle,
         'country': this.country,
-        'institution': this.institution,
+        'institutions': this.institution,
         'description': this.studydesc,
         'authors': this.author,
         'pid': this.applicationpid,
-        'topics': this.topics,
+        'topics': this.nospaces,
         'ethics': this.ethics.toString()
       };
 
@@ -154,7 +155,7 @@ export default {
         if(response.status === 200){
           this.submitted = true;
           this.loading = false;
-          return axios.put('http://localhost:3000/answers/' + this.id + '/', params)
+          return axios.put('http://localhost:3000/answers/' + this.id + '/', {answer: params})
         }
         else{
           this.error = true;
@@ -162,6 +163,7 @@ export default {
       })
       } ,
     saveAnswerLocally() {
+      this.submitted =false;
       this.loading = true;
 
       if(this.topics !== null){
@@ -172,16 +174,16 @@ export default {
         'id': this.id,
         'title': this.studytitle,
         'country': this.country,
-        'institution': this.institution,
+        'institutions': this.institution,
         'description': this.studydesc,
         'authors': this.author,
         'pid': this.applicationpid,
-        'topics': this.topics,
+        'topics': this.nospaces,
         'ethics': this.ethics.toString()
       };
 
        axios
-      .put('http://localhost:3000/answers/' + this.id + '/', params)
+      .put('http://localhost:3000/answers/' + this.id + '/', {answer: params})
       .then(response => {
         if(response.status === 200){
           this.submitted = true;

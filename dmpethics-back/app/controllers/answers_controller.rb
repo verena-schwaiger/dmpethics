@@ -11,7 +11,7 @@ class AnswersController < ApplicationController
   def show
     recommendations = Array.new
     if Answer.find(params['id']).topics != nil
-      # Recommendation system: find all studies that share at least $ratio-limit topics
+      # Recommendation system: find all studies that share at least $ratiolimit topics
       studies = Answer.where.not(id: params['id'])
       topicarray = Answer.find(params['id']).topics.split(",")
       studies.each do |study|
@@ -68,7 +68,7 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:id, :study, :title, :data, :topics, :pid, :country, :institution, :authors, :ethics, :description)
+      params.require(:answer).permit(:id, :study, :title, :data, :topics, :pid, :country, :institutions, :authors, :ethics, :description)
     end
 end
 

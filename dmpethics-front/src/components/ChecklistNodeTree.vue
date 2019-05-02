@@ -12,7 +12,7 @@
             </span>
             <span v-else>
                 <label :for="requirement.reqlabel">{{ requirement.reqlabel }}</label>
-                <span class="wikilink">(<a :href="'http://localhost/smw/index.php/Special:FormEdit/Upload?Files%5BStudyTitle%5D=' + encodeURI(studytitle) + '&Files[FileType]=' + encodeURI(requirement.reqlabel)">Upload to Wiki</a>)</span>
+                <span class="wikilink">(<a :href="'http://localhost/smw/index.php/Special:FormEdit/Upload?Files%5BStudyTitle%5D=' + encodeURI(studytitle) + '&Files[FileType]=' + encodeURI(requirement.reqlabel) + '&Files[PID]=' + encodeURI(generatePID())">Upload to Wiki</a>)</span>
             </span>
         </div>
       </div>        
@@ -31,11 +31,14 @@ export default {
   },
   data() {
     return{
-        answered: null    }
+      answered: null
+    }
   },
   
 methods: {
-
+  generatePID(){
+    return this.studytitle + "-" +  Math.floor((Math.random() * 10000) + 1); 
+  }
 }
 };
 </script>

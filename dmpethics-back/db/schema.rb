@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_22_135640) do
+ActiveRecord::Schema.define(version: 2019_05_02_092849) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 2019_04_22_135640) do
     t.string "pid"
     t.string "country"
     t.string "institutions"
+    t.string "title"
+    t.string "authors"
+    t.string "ethics"
+    t.string "description"
   end
 
   create_table "checklists", force: :cascade do |t|

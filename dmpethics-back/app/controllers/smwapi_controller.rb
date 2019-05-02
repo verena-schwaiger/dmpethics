@@ -3,7 +3,7 @@ class SmwapiController < ApplicationController
 
   # POST
   def create
-    add_study(params[:id], params[:title], params[:country], params[:institution], params[:description], params[:authors], params[:pid], params[:topics], params[:ethics])
+    add_study(params[:id], params[:title], params[:country], params[:institutions], params[:description], params[:authors], params[:pid], params[:topics], params[:ethics])
     render json: {
         status: 200,
         message: "Success",
