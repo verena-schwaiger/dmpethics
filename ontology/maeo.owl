@@ -1,0 +1,696 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"
+     xml:base="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#AccessDataObject"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DeleteDataObject"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ReuseDataObject"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StoreDataObject"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
+        <rdfs:label>requiredConsent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBq0UUR1xDda58DnWOpEb1C -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBq0UUR1xDda58DnWOpEb1C">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent"/>
+        <rdfs:label>giveConsent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDWXhg52lvYz41iKUAo2RHp -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RDWXhg52lvYz41iKUAo2RHp">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+        <rdfs:label>conducts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#associatedWith">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#collectedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#collectedFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#concerningActor -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#concerningActor"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#concerningDataObjects -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#concerningDataObjects">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#grantsApproval -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#grantsApproval">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasApprovalDate -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasApprovalDate">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasApprovalProcess -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasApprovalProcess">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasCommittee -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasCommittee"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDecision -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDecision">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalDecision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDeletionDate -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDeletionDate">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasEthicalConcern -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasEthicalConcern">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConcern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasExpirationDate -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasExpirationDate">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasFileType -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasFileType">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasForm -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasForm">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasFormSection -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasFormSection">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasForm"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApplicantInformation"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorageInformation"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConsideration"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasPID -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasPID"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasRestriction">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalRestriction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasResult"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasSpecification"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#isMemberOf">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsCommitteeMember"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ofStudy -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ofStudy">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredParentalConsent -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredParentalConsent">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredThirdPartyConsent -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredThirdPartyConsent">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiresDocument -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiresDocument"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#stores -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#stores">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+        <rdfs:label>EthicsCommittee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV">
+        <rdfs:label>DataObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK">
+        <rdfs:label>Consent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+        <rdfs:label>EthicsApprovalProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <rdfs:label>HumanParticipant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz">
+        <rdfs:label>Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#AccessDataObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#AccessDataObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Action -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Action">
+        <rdfs:label>Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApplicantInformation -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApplicantInformation">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalDecision -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalDecision">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalExtension -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalExtension">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Cephalopod -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Cephalopod">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#CulturalHeritage -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#CulturalHeritage">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorageInformation -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorageInformation">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date">
+        <rdfs:label>Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DeleteDataObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DeleteDataObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Document -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Document">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConcern -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConcern">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConsideration -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConsideration">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval">
+        <rdfs:label>EthicsApproval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalRestriction -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalRestriction">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsCommitteeMember -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsCommitteeMember">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+        <rdfs:label>Form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#GMO -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#GMO">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution">
+        <rdfs:label>Institution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Minor -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Minor">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Non-vertebrate -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Non-vertebrate">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#OutsidePersonnel -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#OutsidePersonnel">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PID -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PID"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PregnantWoman -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PregnantWoman">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Prisoner -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Prisoner">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Result -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Result">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+        <rdfs:label>Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ReuseDataObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ReuseDataObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StoreDataObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StoreDataObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyDesign -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyDesign">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyInformation -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyInformation">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject">
+        <rdfs:label>StudyObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Tissue -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Tissue">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataObjectAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Vertebrate -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Vertebrate">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#VulnerableParticipant -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#VulnerableParticipant">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
