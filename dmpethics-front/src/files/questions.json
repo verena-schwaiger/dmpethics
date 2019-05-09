@@ -8,7 +8,7 @@
       "category": "A",
       "label": "Are human participants involved?",
       "comment": "Informed consent is required",
-      "keyword": "human",
+      "keyword": "human, HumanParticipant",
       "requirements": [
         {
           "reqlabel": "Consent form",
@@ -27,7 +27,7 @@
           "category": "A",
           "label": "Are minors involved?",
           "comment": "Parental consent is required",
-          "keyword": "children",
+          "keyword": "children, minor",
           "requirements": [
             {
               "reqlabel": "Parental consent form",
@@ -62,7 +62,7 @@
           "category": "A",
           "label": "Are pregnant women involved?",
           "comment": "",
-          "keyword": "pregnant women",
+          "keyword": "pregnant women, PrgenantWomen",
           "requirements": [],
           
           "children": [
@@ -75,7 +75,7 @@
           "category": "A",
           "label": "Are prisoners involved?",
           "comment": "Study should be relevant to and specifically thematize prisoners",
-          "keyword": "prisoners",
+          "keyword": "prisoners, Prisoner",
           "requirements": [],
           
           "children": [

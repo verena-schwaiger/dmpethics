@@ -8,7 +8,6 @@
     <h3>Study details</h3>
     <tree :question-data="questions.questiondata"></tree>
     <button class="submitQuestionnaire" @click="saveAnswer">Submit</button>
-
 </div>
 </template>
 
@@ -32,8 +31,7 @@ export default {
       axios.post('http://localhost:3000/answers', {answer: {study: this.studytitle, data: JSON.stringify(this.questions)}})
         .then(function () {
         router.replace('/answers');
-           })
-           
+           })    
     }
   }
 };

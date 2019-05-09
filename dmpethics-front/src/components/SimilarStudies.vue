@@ -1,22 +1,21 @@
 <template>
   <div class="answer-node-tree">
     <div v-show="!topicsexist">
-        Please add some topics!
+      Please add some topics!
     </div>
     <div v-show="topicsexist">
-        <div v-if="recommendations !== null && recommendations[0]">
-            <div v-for="rec in recommendations" :key="rec">
-                <div class="wikilink">
-                    <a :href="'http://localhost/smw/index.php/'+encodeURI(rec)">{{rec}}</a>
-                </div>   
-            </div>
+      <div v-if="recommendations !== null && recommendations[0]">
+        <div v-for="rec in recommendations" :key="rec">
+          <div class="wikilink">
+            <a :href="'http://localhost/smw/index.php/'+encodeURI(rec)">{{rec}}</a>
+          </div>   
         </div>
-        <div v-else>
-            You either haven't added keywords yet, or there are no studies with similar topics.
-        </div>
+      </div>
+      <div v-else>
+          You either haven't added keywords yet, or there are no studies with similar topics.
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -28,11 +27,11 @@ export default {
   },
   data() {
     return{
-        answers: this.answerData,
-        recommendations: "",
-        current: "x",
-        topicsexist: true
-        }
+      answers: this.answerData,
+      recommendations: "",
+      current: "x",
+      topicsexist: true
+    }
   },
   created () {
     axios
@@ -43,20 +42,18 @@ export default {
       })
   },
   methods: {
-      getStudy(studyid){
-        axios
-        .get('http://localhost:3000/answers/'+studyid+'/', {id: studyid})
-        .then(response => {
-            this.current = response.data;
-            this.topicsexist = true;
-        })
-        // eslint-disable-next-line
-        .catch(error =>{
-            this.topicsexist = false;
-
-        })
-        
-      }      
+    getStudy(studyid){
+      axios
+      .get('http://localhost:3000/answers/'+studyid+'/', {id: studyid})
+      .then(response => {
+          this.current = response.data;
+          this.topicsexist = true;
+      })
+      // eslint-disable-next-line
+      .catch(error =>{
+          this.topicsexist = false;
+      })
+    }      
   }
 };
 </script>

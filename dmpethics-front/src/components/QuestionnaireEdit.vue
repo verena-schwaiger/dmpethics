@@ -15,7 +15,6 @@
     <div v-show="error">
       <p>Error while submitting. Please reload the page and try again.</p>
     </div> 
-    
 </div>
 </template>
 
@@ -28,7 +27,8 @@ export default {
     props: {
     answerData: Object
     },
-    data(){ return {
+    data(){ 
+        return {
         studytitle: this.answerData.study,
         questions: Object,
         submitted: false,
@@ -39,7 +39,6 @@ export default {
     components: {
         Tree
     },
-
     mounted() {
         this.questions = JSON.parse(this.answerData.data);
     },

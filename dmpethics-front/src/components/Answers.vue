@@ -1,7 +1,7 @@
 <!-- Shows all studies from the database as an expandable list. -->
 <template>
 <div  class="container">
- <div id="answers">
+  <div id="answers">
     <div v-for="answer in answers" :key="answer.id">
       <div v-if="answer.study != '' && deleted !== answer.id" class="study">
         <div class="study-header">
@@ -29,15 +29,14 @@
               <similar-studies :answer-data="answer"></similar-studies>
             </div>
           </div>
-
         </div>
       </div>
     </div>
     <div v-show="loading">
       <img src="@/assets/loading.gif" width="70px" height="35px">
     </div> 
+  </div>
 </div>
- </div>
 </template>
 
 <script>
@@ -46,7 +45,6 @@ import AnswerTree from "./AnswerTree.vue"
 import ChecklistTree from "./ChecklistTree.vue"
 import QuestionnaireEdit from "./QuestionnaireEdit.vue"
 import SimilarStudies from "./SimilarStudies.vue"
-//import router from "../router";
 
 export default {
  data() {
@@ -63,7 +61,7 @@ export default {
  },
    computed:{
     dataToJSON (a){
-        return JSON.parse(a)
+      return JSON.parse(a)
     }
   },
   created () {
@@ -76,10 +74,10 @@ export default {
       })
   },
   components: {
-      AnswerTree,
-      ChecklistTree,
-      QuestionnaireEdit,
-      SimilarStudies
+    AnswerTree,
+    ChecklistTree,
+    QuestionnaireEdit,
+    SimilarStudies
     },
   methods: {
     reloadData(e){       

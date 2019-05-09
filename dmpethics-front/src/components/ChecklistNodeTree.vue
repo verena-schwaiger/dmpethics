@@ -1,7 +1,6 @@
 <!-- Renders nodes from the questionnaire data:
     Only shows requirements that are necessary according to user's filled out questionnaire data -->
 <template>
-
   <div class="checklist-node-tree">
     <div class="wikiformfield">
       <div v-if="checklist.checked === true">
@@ -19,7 +18,6 @@
       <checklist v-for="child in checklist.children" :checklist="child" :studytitle="studytitle" :key="child.id"></checklist>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -34,11 +32,10 @@ export default {
       answered: null
     }
   },
-  
-methods: {
-  generatePID(){
-    return this.studytitle + "-" +  Math.floor((Math.random() * 10000) + 1); 
+  methods: {
+    generatePID(){
+      return this.studytitle + "-" +  Math.floor((Math.random() * 10000) + 1); 
+    }
   }
-}
 };
 </script>

@@ -4,7 +4,6 @@
   <div class="nav">
     <nav>
         <router-link class="navlink" v-for="link in pages" v-bind:key="link.id" :to="`${link.route}`">{{link.text}}</router-link>
-
     </nav>
   </div>
 </template>
