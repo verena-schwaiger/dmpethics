@@ -17,7 +17,10 @@ A Ruby on Rails API application that controls and manages data for the frontend.
 <pre>
 cd dmpethics-back
 gem install
+rake db:migrate
 </pre>
+
+This installs all needed Ruby gems and performs a database migration to get your database up to date.
 
 ### Run
 <pre>
@@ -37,6 +40,8 @@ A Vue.js application that provides an interface. Uses axios for GET/POST/PUT/DEL
 cd dmpethics-front
 yarn install
 </pre>
+
+This install all needed dependencies.
 
 ### Run 
 <pre>
