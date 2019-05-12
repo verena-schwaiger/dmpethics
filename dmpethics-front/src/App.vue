@@ -72,7 +72,7 @@ a:visited {
 }
 
 .container {
-  padding: 20px;
+  padding: 10px;
 }
 
 .wikilink {
@@ -80,13 +80,7 @@ a:visited {
 }
 
 div.question {
-  padding: 30px 0px 10px 5%;
-  padding-left: 5%;
-}
-
-div.subquestion {
-  padding: 10px;
-  padding-left: 10%;
+  padding: 20px 0px 10px 30px;
 }
 
 div.warning {

@@ -1,8 +1,7 @@
 <template>
-  <div>
-    {{answerData}}
+  <p>
     <questionnaire-node-tree :questionData="answerData"></questionnaire-node-tree>
-  </div>
+  </p>
 </template>
 
 <script>

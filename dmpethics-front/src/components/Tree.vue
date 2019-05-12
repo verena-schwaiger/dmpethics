@@ -1,5 +1,5 @@
 <template>
-      <node-tree :node="questionData"></node-tree>
+  <node-tree :node="questionData"></node-tree>
 </template>
 
 <script>
