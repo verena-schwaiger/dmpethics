@@ -7,7 +7,7 @@
       <div v-if="recommendations !== null && recommendations[0]">
         <div v-for="rec in recommendations" :key="rec">
           <div class="wikilink">
-            <a :href="'http://localhost/smw/index.php/'+encodeURI(rec)">{{rec}}</a>
+            <a :href="'http://localhost/smw/index.php/'+encodeURI(rec)">{{getStudy(rec)}} {{current}}</a>
           </div>   
         </div>
       </div>
@@ -29,7 +29,7 @@ export default {
     return{
       answers: this.answerData,
       recommendations: "",
-      current: "x",
+      current: "",
       topicsexist: true
     }
   },
@@ -46,12 +46,7 @@ export default {
       axios
       .get('http://localhost:3000/answers/'+studyid+'/', {id: studyid})
       .then(response => {
-          this.current = response.data;
-          this.topicsexist = true;
-      })
-      // eslint-disable-next-line
-      .catch(error =>{
-          this.topicsexist = false;
+        this.current = response.data.title;
       })
     }      
   }

@@ -25,10 +25,10 @@ class AnswersController < ApplicationController
         end
       end
     end
-    #render json: @answer
     render json:{
       status: 200,
       study: @answer,
+      title: Answer.find(params['id']).title,
       recommendations: recommendations
     }
   end
@@ -37,8 +37,7 @@ class AnswersController < ApplicationController
   # POST /answers
   def create
     @answer = Answer.new(answer_params)
-    questionnaire = Answer.find(params['id']).data
-    write_metadata(answer_params, questionnaire)
+    write_metadata(answer_params, nil)
     if @answer.save
       render json: @answer, status: :created, location: @answer
     else
