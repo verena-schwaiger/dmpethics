@@ -1,12 +1,122 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"
      xml:base="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:po8v3KNFDJwFL04YePVBY="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#">
     <owl:Ontology rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DUO_0000041 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/DUO_0000041"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ICO_0000091 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ICO_0000091"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ICO_0000092 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ICO_0000092"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#cui -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#cui"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
     
 
 
@@ -21,6 +131,52 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DUO_0000010 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/DUO_0000010">
+        <obo:DUO_0000041 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_restricted_to</obo:DUO_0000041>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. Neil Otte</obo:IAO_0000117>
+        <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E.g. A dataset is restricted to an instance of an investigation for a specific disease or at geographical location.</obo:IAO_0000232>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUO:0000010</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is restricted to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002350">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <obo:IAO_0000112>An organism that is a member of a population of organisms</obo:IAO_0000112>
+        <obo:IAO_0000115>is member of is a mereological relation between a item and a collection.</obo:IAO_0000115>
+        <obo:IAO_0000118>is member of</obo:IAO_0000118>
+        <obo:IAO_0000118>member part of</obo:IAO_0000118>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE551318 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE551318">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has actor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE901000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE901000">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executed at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy">
@@ -31,7 +187,7 @@
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StoreDataObject"/>
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
-        <rdfs:label>requiredConsent</rdfs:label>
+        <rdfs:label>requires consent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -52,7 +208,6 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RDWXhg52lvYz41iKUAo2RHp">
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
         <rdfs:label>conducts</rdfs:label>
     </owl:ObjectProperty>
     
@@ -71,7 +226,6 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#collectedFrom">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
     </owl:ObjectProperty>
     
@@ -114,7 +268,6 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasApprovalProcess">
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy"/>
     </owl:ObjectProperty>
     
 
@@ -144,7 +297,6 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDeletionDate">
         <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasDate"/>
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date"/>
     </owl:ObjectProperty>
     
@@ -179,7 +331,6 @@
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasForm -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasForm">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
     </owl:ObjectProperty>
     
@@ -204,15 +355,6 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasRestriction -->
-
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasRestriction">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalRestriction"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasResult -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#hasResult"/>
@@ -225,20 +367,10 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#isMemberOf -->
-
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#isMemberOf">
-        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsCommitteeMember"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ofStudy -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ofStudy">
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
     </owl:ObjectProperty>
     
 
@@ -248,21 +380,16 @@
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredParentalConsent">
         <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredThirdPartyConsent -->
-
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiredThirdPartyConsent">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9FIimclWx7lpr1Wed5iMXy"/>
+        <rdfs:label>requires parental consent</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiresDocument -->
 
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiresDocument"/>
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#requiresDocument">
+        <rdfs:label>requires</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -270,8 +397,34 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#stores">
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage"/>
-        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE744000 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE744000">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/OCRe/OCRe.owl#OCRE900208"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE900208 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE900208"/>
     
 
 
@@ -286,19 +439,103 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK -->
+    <!-- http://purl.obolibrary.org/obo/DUO_0000021 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
-        <rdfs:label>EthicsCommittee</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DUO_0000021">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <obo:DUO_0000041 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethics approval required</obo:DUO_0000041>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This requirement indicates that the requestor must provide documentation of local IRB/ERB approval.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUO:0000021</oboInOwl:id>
+        <oboInOwl:shorthand xml:lang="en">IRB</oboInOwl:shorthand>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethics approval required</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7nWVF2u1bI6N1OVE1DcEbV">
-        <rdfs:label>DataObject</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+        <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">JAR: datum     -- well, this will be very tricky to define, but maybe some 
+information-like stuff that might be put into a computer and that is 
+meant, by someone, to denote and/or to be interpreted by some 
+process... I would include lists, tables, sentences... I think I might 
+defer to Barry, or to Brian Cantwell Smith
+
+JAR: A data item is an approximately justified approximately true approximate belief</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ICO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ICO_0000001">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Document"/>
+        <obo:IAO_0000115 xml:lang="en">A document that explains all relevant information to assist a human being in understanding the expectations and requirements of participation in a process, and is an instrument in obtaining consent and, after having obtained consent, is a record that such a consent has occurred.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">The term definition is adapted from NCIt definition of &apos;consent form&apos; (C16468) with modification. For instance, whereas the NCIt definition restricted informed consent forms to clinical trials, the present definition does not.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en"></obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Alla Karnovsky, Frank Manion, Yongqun He, Asiyah Yu Lin, Marcy Harris, Elizabeth Eisenhauer, Jonathan Vajda, Cooper Stansbury, J. Neil Otte</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">informed consent document</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">NCIt C16468</obo:IAO_0000119>
+        <obo:IAO_0000232 xml:lang="en">See curator note for &apos;incomplete informed consent form&apos;.</obo:IAO_0000232>
+        <obo:ICO_0000091 xml:lang="en">C0009797</obo:ICO_0000091>
+        <obo:ICO_0000092 xml:lang="en">C16468</obo:ICO_0000092>
+        <rdfs:label xml:lang="en">informed consent form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE400029 -->
+
+    <owl:Class rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE400029">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A study is a program of data collection and of analysis of the data collected to answer a particular question, to reach conclusions about subject(s) or situation(s).</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/OCRe/OCRe.owl#OCRE568687 -->
+
+    <owl:Class rdf:about="http://purl.org/net/OCRe/OCRe.owl#OCRE568687">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ethics approval process is a study administrative relation whereby a study is submitted to a committee that is formally designated to approve, monitor, and review biomedical and behavioral research involving humans with the aim to protect the rights and welfare of the research subjects.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simona</obo:IAO_0000117>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethics approval process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/OCRe/study_design.owl#OCRE100056 -->
+
+    <owl:Class rdf:about="http://purl.org/net/OCRe/study_design.owl#OCRE100056">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/OCRe/OCRe.owl#OCRE400029"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A study design is a common pattern of relationships  (in time and causation) among various study elements (e.g., time of intervention to outcomes assessment in which participants).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simona</obo:IAO_0000117>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Study design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R5YudFK82Zx4BSkQXSp2vK">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C142541</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C142541</oboInOwl:id>
+        <rdfs:comment>An independent group that comprises medical, scientific, and non-scientific members, and is tasked with the continuing review and approval of a clinical trial&apos;s protocol, methods, and informed consent process to ensure the protection of the rights, safety, and wellbeing of participants.</rdfs:comment>
+        <rdfs:label>EthicsCommittee</rdfs:label>
     </owl:Class>
     
 
@@ -306,16 +543,10 @@
     <!-- http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK">
-        <rdfs:label>Consent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8KTY6nBPi2P1j4Hn4HJoRy">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution"/>
-        <rdfs:label>EthicsApprovalProcess</rdfs:label>
+        <po8v3KNFDJwFL04YePVBY:cui>C0021430</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D007258</oboInOwl:id>
+        <rdfs:comment>Voluntary authorization, by a patient or research subject, with full comprehension of the risks involved, for diagnostic or investigative procedures, and for medical and surgical treatment.</rdfs:comment>
+        <rdfs:label>Informed consent</rdfs:label>
     </owl:Class>
     
 
@@ -325,14 +556,6 @@
     <owl:Class rdf:about="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
         <rdfs:label>HumanParticipant</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz">
-        <rdfs:label>Study</rdfs:label>
     </owl:Class>
     
 
@@ -363,6 +586,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <rdfs:comment>http://purl.bioontology.org/ontology/STY/T008</rdfs:comment>
     </owl:Class>
     
 
@@ -371,6 +595,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApplicantInformation">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C79184</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C79184</oboInOwl:id>
     </owl:Class>
     
 
@@ -379,6 +605,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Action"/>
+        <rdfs:comment>An action related to the approval of a study.</rdfs:comment>
     </owl:Class>
     
 
@@ -387,6 +614,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalDecision">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction"/>
+        <rdfs:comment>The approval decision for a study.</rdfs:comment>
     </owl:Class>
     
 
@@ -395,14 +623,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalExtension">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ApprovalAction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Cephalopod -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Cephalopod">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+        <rdfs:comment>The extension of an existing approval.</rdfs:comment>
     </owl:Class>
     
 
@@ -411,6 +632,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#CulturalHeritage">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject"/>
+        <rdfs:comment>Tangible object that is subject to preservation efforts.</rdfs:comment>
     </owl:Class>
     
 
@@ -419,6 +641,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor"/>
+        <po8v3KNFDJwFL04YePVBY:cui>AGRO:00000379</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.obolibrary.org/obo/AGRO_00000379</oboInOwl:id>
     </owl:Class>
     
 
@@ -433,7 +657,10 @@
 
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage"/>
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorage">
+        <po8v3KNFDJwFL04YePVBY:cui>C142494</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C142494</oboInOwl:id>
+    </owl:Class>
     
 
 
@@ -441,6 +668,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataStorageInformation">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+        <rdfs:comment>Information about the planned data storage, including privacy and security plans.</rdfs:comment>
     </owl:Class>
     
 
@@ -448,6 +676,8 @@
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date">
+        <po8v3KNFDJwFL04YePVBY:cui>C0011008</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/410672004</oboInOwl:id>
         <rdfs:label>Date</rdfs:label>
     </owl:Class>
     
@@ -465,6 +695,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Document">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C19498</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19498</oboInOwl:id>
     </owl:Class>
     
 
@@ -473,6 +705,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConcern">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <rdfs:comment>An ethical concern that is related to and comes up with a specific study object.</rdfs:comment>
     </owl:Class>
     
 
@@ -481,6 +714,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicalConsideration">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form"/>
+        <rdfs:comment>Considerations about potential ethical issues that reflect the plan to handle them during a study.</rdfs:comment>
     </owl:Class>
     
 
@@ -488,6 +722,7 @@
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval">
+        <rdfs:comment>The abstract entity ethics approval.</rdfs:comment>
         <rdfs:label>EthicsApproval</rdfs:label>
     </owl:Class>
     
@@ -495,7 +730,9 @@
 
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication">
+        <rdfs:comment>The application filled out by researcher to request ethics approval.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -503,6 +740,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalRestriction">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApproval"/>
+        <rdfs:comment>A restriction placed on a study in order to fulfil the requirements for ethics approval.</rdfs:comment>
     </owl:Class>
     
 
@@ -511,6 +749,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsCommitteeMember">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Actor"/>
+        <oboInOwl:id>http://dicom.nema.org/resources/ontology/DCM/128677</oboInOwl:id>
     </owl:Class>
     
 
@@ -519,6 +758,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Form">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#EthicsApprovalApplication"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0348078</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/246176004</oboInOwl:id>
         <rdfs:label>Form</rdfs:label>
     </owl:Class>
     
@@ -528,6 +769,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#GMO">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C97158</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97158</oboInOwl:id>
     </owl:Class>
     
 
@@ -536,6 +779,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <oboInOwl:id>http://www.projecthalo.com/aura#Inanimate-Object</oboInOwl:id>
     </owl:Class>
     
 
@@ -543,7 +787,20 @@
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Institution">
+        <po8v3KNFDJwFL04YePVBY:cui>C41206</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41206</oboInOwl:id>
+        <rdfs:comment>An established society, corporation, foundation or other organization founded and united for a specific purpose, e.g. for health-related research; also used to refer to a building or buildings occupied or used by such organization.</rdfs:comment>
         <rdfs:label>Institution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Invertebrate -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Invertebrate">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0021948</po8v3KNFDJwFL04YePVBY:cui>
+        <rdfs:comment>http://purl.bioontology.org/ontology/SNOMEDCT/272608008</rdfs:comment>
     </owl:Class>
     
 
@@ -552,14 +809,18 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Minor">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0026193</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/410599005</oboInOwl:id>
     </owl:Class>
     
 
 
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Non-vertebrate -->
+    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Organic_natural_material -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Non-vertebrate">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Organic_natural_material">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0567360</po8v3KNFDJwFL04YePVBY:cui>
+        <rdfs:comment>http://purl.bioontology.org/ontology/SNOMEDCT/289958009</rdfs:comment>
     </owl:Class>
     
 
@@ -568,13 +829,16 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#OutsidePersonnel">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector"/>
+        <rdfs:comment>Assisting and outside personnel that is not directly involved with the study set-up and application process.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PID -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PID"/>
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PID">
+        <rdfs:comment>Persistent identifier for long-term access.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -582,6 +846,9 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0600634</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D033282</oboInOwl:id>
+        <rdfs:comment>Informed consent given by a parent on behalf of a minor or otherwise incompetent child.</rdfs:comment>
     </owl:Class>
     
 
@@ -590,6 +857,10 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PregnantWoman">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0549206
+C0032961
+C0549169</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/77386006</oboInOwl:id>
     </owl:Class>
     
 
@@ -598,6 +869,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Prisoner">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+        <po8v3KNFDJwFL04YePVBY:cui>ICO:0000289</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.obolibrary.org/obo/ICO_0000289</oboInOwl:id>
     </owl:Class>
     
 
@@ -606,6 +879,8 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C0035173</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/769038007</oboInOwl:id>
     </owl:Class>
     
 
@@ -613,7 +888,8 @@
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Result -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Result">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/OCRe/OCRe.owl#OCRE400029"/>
+        <rdfs:comment>The result of a study in the form of a textual entity</rdfs:comment>
         <rdfs:label>Result</rdfs:label>
     </owl:Class>
     
@@ -635,14 +911,6 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyDesign -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyDesign">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RaCl3SnDCcpAtybuiFlkMz"/>
-    </owl:Class>
-    
-
-
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyInformation -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyInformation">
@@ -659,14 +927,6 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Tissue -->
-
-    <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Tissue">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
-    </owl:Class>
-    
-
-
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#UseDataObject">
@@ -679,6 +939,7 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Vertebrate">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
+        <rdfs:comment>http://purl.bioontology.org/ontology/STY/T010</rdfs:comment>
     </owl:Class>
     
 
@@ -687,6 +948,11 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#VulnerableParticipant">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
+        <po8v3KNFDJwFL04YePVBY:cui>C2350029
+C0012613
+C0949366
+C0872319</po8v3KNFDJwFL04YePVBY:cui>
+        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D035862</oboInOwl:id>
     </owl:Class>
 </rdf:RDF>
 

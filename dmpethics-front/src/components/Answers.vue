@@ -5,7 +5,7 @@
     <div v-for="answer in answers" :key="answer.id">
       <div v-if="answer.study != '' && deleted !== answer.id" class="study">
         <div class="study-header">
-          <a href="#" v-on:click="isSelected=answer.id; tabselect=1">{{ answer.study }}</a>
+          <a href="#" v-on:click="isSelected=answer.id; tabselect=1; reloadData()">{{ answer.study }}</a>
         </div>
         <div v-if="isSelected === answer.id" class="form-wiki-outer">
           <div class="tabs">

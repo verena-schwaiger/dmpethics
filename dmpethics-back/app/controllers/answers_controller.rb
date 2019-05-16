@@ -37,7 +37,8 @@ class AnswersController < ApplicationController
   # POST /answers
   def create
     @answer = Answer.new(answer_params)
-
+    questionnaire = Answer.find(params['id']).data
+    write_metadata(answer_params, questionnaire)
     if @answer.save
       render json: @answer, status: :created, location: @answer
     else
@@ -47,7 +48,8 @@ class AnswersController < ApplicationController
 
   # PATCH/PUT /answers/1
   def update
-    #answer = Answer.find(params['id'])
+    questionnaire = Answer.find(params['id']).data
+    write_metadata(answer_params, questionnaire)
     if @answer.update(answer_params)
       render json: @answer
     else
@@ -68,7 +70,7 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:id, :study, :title, :data, :topics, :pid, :country, :institutions, :authors, :ethics, :description)
+      params.require(:answer).permit(:id, :study, :title, :data, :topics, :pid, :country, :institutions, :authors, :ethics, :description, :status)
     end
 end
 

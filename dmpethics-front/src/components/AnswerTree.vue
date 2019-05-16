@@ -14,8 +14,16 @@
         <label class="form-label">Author(s)</label>
         <input type="text" class="input" name="author" v-model="author">
 
-        <label class="" :for="studytitle">Existing Application PID</label>
+        <label class="form-label">Existing Application PID</label>
         <input type="text" class="input" name="applicationpid" v-model="applicationpid">
+
+        <label class="form-label">Application status</label>
+        <select name="status" form="statusform" v-model="status">
+          <option value=""></option>
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
 
         <label class="form-label">Involved institution(s)</label>
         <input type="text" class="input" name="institution" v-model="institution">
@@ -74,6 +82,7 @@ export default {
       applicationpid: this.answerData.pid,
       author: this.answerData.authors,
       ethics: this.getEthicsFactors(),
+      status: this.answerData.status,
       existingdata: "",
       nospaces: "",
       files:[],
@@ -118,7 +127,7 @@ export default {
       this.submitted =false;
 
       if(this.topics !== null){
-        this.nospaces = this.topics.replace(/\s/g, "");
+        this.nospaces = this.topics.replace(/\s*,\s*/g, ",");
       }
 
       var params = {
@@ -130,7 +139,8 @@ export default {
         'authors': this.author,
         'pid': this.applicationpid,
         'topics': this.nospaces,
-        'ethics': this.ethics.toString()
+        'ethics': this.ethics.toString(),
+        'status': this.status
       };
 
       axios
@@ -151,7 +161,7 @@ export default {
       this.loading = true;
 
       if(this.topics !== null){
-        this.nospaces = this.topics.replace(/\s/g, "");
+        this.nospaces = this.topics.replace(/\s*,\s*/g, ",");
       }
 
       var params = {
@@ -163,7 +173,8 @@ export default {
         'authors': this.author,
         'pid': this.applicationpid,
         'topics': this.nospaces,
-        'ethics': this.ethics.toString()
+        'ethics': this.ethics.toString(),
+        'status': this.status
       };
 
        axios

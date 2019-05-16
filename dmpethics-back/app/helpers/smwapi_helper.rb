@@ -1,6 +1,6 @@
 module SmwapiHelper
  
-  def add_study(id="", title="", country="", institution="", description="", authors="", pid="", topics="", ethics="")
+  def add_study(id="", title="", country="", institution="", description="", authors="", pid="", topics="", ethics="", status="")
     client = MediawikiApi::Client.new "http://localhost/smw/api.php"
     client.log_in "Verena@editbot", "nq78aakp00ng9811cid7cdcs4a7a8hps"
     client.create_page "#{id}", "{{Study
@@ -11,6 +11,7 @@ module SmwapiHelper
   |Country=#{country}
   |Keywords=#{topics}
   |EthicsFactors=#{ethics}
+  |Status=#{status}
   }}#{description}"
   end
 
