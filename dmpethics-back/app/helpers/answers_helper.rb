@@ -1,6 +1,6 @@
 module AnswersHelper
 
-    def write_metadata(params, questionnaire)
+    def write_metadata(params, questionnaire="")
         metadata = {
             "id" => params[:id],
             "study" => params[:study],
