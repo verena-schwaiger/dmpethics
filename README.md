@@ -1,4 +1,9 @@
 # dmpethics
+
+
+[![DOI](https://zenodo.org/badge/150131683.svg)](https://zenodo.org/badge/latestdoi/150131683)
+
+
 Dmpethics is a web application that helps researchers going through the ethics approval process. It is connected with a Semantic MediaWiki, which is used to make the ethics process public, transparent and searchable.
 
 
