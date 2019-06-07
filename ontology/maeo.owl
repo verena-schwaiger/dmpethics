@@ -543,9 +543,6 @@ JAR: A data item is an approximately justified approximately true approximate be
     <!-- http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK">
-        <po8v3KNFDJwFL04YePVBY:cui>C0021430</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D007258</oboInOwl:id>
-        <rdfs:comment>Voluntary authorization, by a patient or research subject, with full comprehension of the risks involved, for diagnostic or investigative procedures, and for medical and surgical treatment.</rdfs:comment>
         <rdfs:label>Informed consent</rdfs:label>
     </owl:Class>
     
@@ -676,8 +673,6 @@ JAR: A data item is an approximately justified approximately true approximate be
     <!-- http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Date">
-        <po8v3KNFDJwFL04YePVBY:cui>C0011008</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/410672004</oboInOwl:id>
         <rdfs:label>Date</rdfs:label>
     </owl:Class>
     
@@ -779,7 +774,6 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#InanimateObject">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
-        <oboInOwl:id>http://www.projecthalo.com/aura#Inanimate-Object</oboInOwl:id>
     </owl:Class>
     
 
@@ -799,8 +793,6 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Invertebrate">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Animal"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C0021948</po8v3KNFDJwFL04YePVBY:cui>
-        <rdfs:comment>http://purl.bioontology.org/ontology/SNOMEDCT/272608008</rdfs:comment>
     </owl:Class>
     
 
@@ -809,8 +801,6 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Minor">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C0026193</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/410599005</oboInOwl:id>
     </owl:Class>
     
 
@@ -820,7 +810,6 @@ JAR: A data item is an approximately justified approximately true approximate be
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Organic_natural_material">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#StudyObject"/>
         <po8v3KNFDJwFL04YePVBY:cui>C0567360</po8v3KNFDJwFL04YePVBY:cui>
-        <rdfs:comment>http://purl.bioontology.org/ontology/SNOMEDCT/289958009</rdfs:comment>
     </owl:Class>
     
 
@@ -846,8 +835,6 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#ParentalConsent">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7sDJAdvpUNyfjKWBjG0yxK"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C0600634</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D033282</oboInOwl:id>
         <rdfs:comment>Informed consent given by a parent on behalf of a minor or otherwise incompetent child.</rdfs:comment>
     </owl:Class>
     
@@ -857,10 +844,6 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#PregnantWoman">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C0549206
-C0032961
-C0549169</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/77386006</oboInOwl:id>
     </owl:Class>
     
 
@@ -879,8 +862,6 @@ C0549169</po8v3KNFDJwFL04YePVBY:cui>
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#Researcher">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#DataCollector"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C0035173</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/SNOMEDCT/769038007</oboInOwl:id>
     </owl:Class>
     
 
@@ -948,11 +929,6 @@ C0549169</po8v3KNFDJwFL04YePVBY:cui>
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/7po8v3KNFDJwFL04YePVBY#VulnerableParticipant">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RUB6Eqft0rea7uSYgQrLy1"/>
-        <po8v3KNFDJwFL04YePVBY:cui>C2350029
-C0012613
-C0949366
-C0872319</po8v3KNFDJwFL04YePVBY:cui>
-        <oboInOwl:id>http://purl.bioontology.org/ontology/MESH/D035862</oboInOwl:id>
     </owl:Class>
 </rdf:RDF>
 
